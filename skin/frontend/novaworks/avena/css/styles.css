@@ -7089,6 +7089,10 @@ a.youtube, a.inline {
     padding: 10px 16px;
 }
 
+a.inline{
+  margin-left: 10px;  
+}
+
 #snippet {
 	margin-left: 15px;
 	margin-bottom: 3px;
