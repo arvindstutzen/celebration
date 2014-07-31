@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vkantech_Customemailoption>
+            <version>0.0.1</version>
+        </Vkantech_Customemailoption>
+    </modules>
+	
+	<frontend>  
+		<routers>		
+          <customemailoption>
+              <use>standard</use>
+              <args>
+                 <module>Vkantech_Customemailoption</module>
+                 <frontName>vkantechtest</frontName>
+              </args>
+			</customemailoption>
+       </routers>
+	   
+	</frontend>	
+		
+<global>
+    <models>
+        <sales>
+            <rewrite>
+                <order>Vkantech_Customemailoption_Model_Order</order>
+            </rewrite>
+        </sales>
+    </models>
+		
+	<template>
+		<email>
+			<vkantechtest_testmail_template module="customemailoption">
+				<label>Vkantechtest testmail</label>
+				<file>vkantech/testmail.html</file>
+				<type>html</type>
+			</vkantechtest_testmail_template>	
+		</email>
+	</template>
+	
+</global>	
+	
+</config>
