@@ -54,10 +54,7 @@ h1, h2, h3, h4, h5, h6, .home-content h3.title, .who-we-are h1, .footer-info .ne
 #wide-menu #nav li ul a span { white-space:normal; }
 #wide-menu #nav > li { display:inline-block; }
 #wide-menu #nav > li > a {
-  color:#ffffff;
   display:block;
-  font-family:'Crimson Text', sans-serif;
-  font-size:14px;
   line-height:50px;
   padding:0 15px;
 }
@@ -112,12 +109,12 @@ h1, h2, h3, h4, h5, h6, .home-content h3.title, .who-we-are h1, .footer-info .ne
   padding:0 5px 0 15px;
 }
 #wide-menu #nav ul ul, #wide-menu #nav ul div { position:static !important; }
-#wide-menu #nav ul ul { padding-top:5px; }
+#wide-menu #nav ul ul { padding-top:5px; padding-bottom: 15px; }
 #wide-menu #nav ul ul li {
   float:none;
   margin:0;
   list-style:none;
-  line-height:25px;
+  line-height:20px;
 }
 #wide-menu #nav ul ul li a:hover { text-decoration:underline; }
 #wide-menu #nav ul.level2 { padding:5px 0 5px 8px; }

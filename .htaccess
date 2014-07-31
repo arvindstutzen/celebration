@@ -138,7 +138,7 @@
 ## you can put here your magento root folder
 ## path relative to web root
 
-    RewriteBase /magento-1.9.0.1/
+    RewriteBase /celebration/
 
 ############################################
 ## uncomment next line to enable light API calls processing

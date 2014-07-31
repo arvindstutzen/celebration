@@ -31,7 +31,7 @@
             <date><![CDATA[Sat, 21 Dec 2013 16:05:56 -0600]]></date>
         </install>
         <crypt>
-            <key><![CDATA[sxpxp9j7jx6f5clurhrijvkm9jq1vn5p]]></key>
+            <key><![CDATA[sxpxp9j7jx6f5clurh85647m9jq1vn5p]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[]]></password>
-                    <dbname><![CDATA[celebration]]></dbname>
+                    <dbname><![CDATA[celebration1s]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>

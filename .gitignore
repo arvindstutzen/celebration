@@ -7,3 +7,5 @@
 /lib/Zend/
 /lib/Magento/
 /lib/Mage/
+*.bak
+.htaccess.bak
