@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Siteground_SuperCacher>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Siteground_SuperCacher>
     </modules>
