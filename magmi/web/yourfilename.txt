@@ -1,0 +1,186 @@
+0.35807800 1403855262yoursting
+0.35813800 1403855262yoursting
+0.35816900 1403855262yoursting
+0.35819900 1403855262yoursting
+0.35846800 1403855262SELECT cs.store_id,csg.website_id,cce.entity_type_id,cce.path,ccev.value as name
+								FROM mg_core_store as cs 
+								JOIN mg_core_store_group as csg on csg.group_id=cs.group_id
+								JOIN mg_catalog_category_entity as cce ON cce.entity_id=csg.root_category_id
+								JOIN mg_eav_attribute as ea ON ea.attribute_code='name' AND ea.entity_type_id=cce.entity_type_id
+								JOIN mg_catalog_category_entity_varchar as ccev ON ccev.attribute_id=ea.attribute_id AND ccev.entity_id=cce.entity_id
+		 
+
+0.35856200 1403855262yoursting
+0.35871400 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => name
+)
+
+0.35877000 1403855262yoursting
+0.35895800 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => url_key
+)
+
+0.35903700 1403855262yoursting
+0.35914600 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => url_path
+)
+
+0.35920400 1403855262yoursting
+0.35931400 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => is_active
+)
+
+0.35937200 1403855262yoursting
+0.35948100 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => is_anchor
+)
+
+0.35953700 1403855262yoursting
+0.35964700 1403855262SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => include_in_menu
+)
+
+0.36023700 1403855262yoursting
+0.36027100 1403855262yoursting
+0.36030100 1403855262yoursting
+0.36033100 1403855262yoursting
+0.36036000 1403855262yoursting
+0.36038900 1403855262yoursting
+0.36041800 1403855262yoursting
+0.36044800 1403855262yoursting
+0.36047700 1403855262yoursting
+0.36050600 1403855262yoursting
+0.36053600 1403855262yoursting
+0.36056500 1403855262yoursting
+0.36060500 1403855262yoursting
+0.36070500 1403855262SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?
+Array
+(
+    [0] => catalog_product
+)
+
+0.36076400 1403855262yoursting
+0.36082300 1403855262yoursting
+0.36095400 1403855262SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?)) AND (entity_type_id=?)
+Array
+(
+    [0] => visibility
+    [1] => 4
+)
+
+0.36187600 1403855262yoursting
+0.36197300 1403855262SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?
+Array
+(
+    [0] => catalog_product
+)
+
+0.36201600 1403855262yoursting
+0.36211600 1403855262SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?
+Array
+(
+    [0] => Default
+    [1] => 4
+)
+
+0.36279000 1403855262yoursting
+0.36290000 1403855262SELECT attribute_code FROM mg_eav_attribute WHERE  is_required=1
+		AND frontend_input!='' AND frontend_label!='' AND entity_type_id=?
+Array
+(
+    [0] => 4
+)
+
+0.36298400 1403855262yoursting
+0.36301600 1403855262yoursting
+0.36316800 1403855262SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)) AND (entity_type_id=?)
+Array
+(
+    [0] => sku
+    [1] => attribute_set
+    [2] => product_type_id
+    [3] => type
+    [4] => category_ids
+    [5] => name
+    [6] => media_gallery
+    [7] => image
+    [8] => small_image
+    [9] => thumbnail
+    [10] => material
+    [11] => qty
+    [12] => special_price
+    [13] => price
+    [14] => description
+    [15] => short_description
+    [16] => tax_class_id
+    [17] => is_in_stock
+    [18] => template
+    [19] => customization
+    [20] => links
+    [21] => store
+    [22] => status
+    [23] => page_layout
+    [24] => 4
+)
+
+0.36363700 1403855262-- TRANSACTION BEGIN --
+0.36398500 1403855262yoursting
+0.36410800 1403855262SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?
+Array
+(
+    [0] => down-test-1
+)
+
+0.36415200 1403855262yoursting
+0.36425500 1403855262SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?
+Array
+(
+    [0] => all
+    [1] => 4
+)
+
+0.36431000 1403855262yoursting
+0.36436400 1403855262yoursting
+0.36501600 1403855262DESCRIBE mg_catalog_product_entity
+
+0.36685400 1403855262INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)
+Array
+(
+    [0] => down-test-1
+    [1] => downloadable
+    [2] => 25
+    [3] => 4
+    [4] => 2014-06-27 02:47:42
+    [5] => 2014-06-27 02:47:42
+)
+
+0.36713300 1403855262yoursting
+0.36743700 1403855262select * from mg_downloadable_link where product_id = ?
+Array
+(
+    [0] => 10368
+)
+
+0.36766000 1403855262yoursting

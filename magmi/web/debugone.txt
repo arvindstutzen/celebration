@@ -1,0 +1,239 @@
+
+0.29713900 1403860181mg__catalog_category_entity
+0.29718600 1403860181mg__core_store_group
+0.29721700 1403860181mg__core_store
+0.29724700 1403860181mg__eav_attribute
+0.29755100 1403860181SELECT cs.store_id,csg.website_id,cce.entity_type_id,cce.path,ccev.value as name
+								FROM mg_core_store as cs 
+								JOIN mg_core_store_group as csg on csg.group_id=cs.group_id
+								JOIN mg_catalog_category_entity as cce ON cce.entity_id=csg.root_category_id
+								JOIN mg_eav_attribute as ea ON ea.attribute_code='name' AND ea.entity_type_id=cce.entity_type_id
+								JOIN mg_catalog_category_entity_varchar as ccev ON ccev.attribute_id=ea.attribute_id AND ccev.entity_id=cce.entity_id
+		 
+
+0.29764100 1403860181mg__eav_attribute
+0.29794300 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => name
+)
+
+0.29801700 1403860181mg__eav_attribute
+0.29817700 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => url_key
+)
+
+0.29823300 1403860181mg__eav_attribute
+0.29838500 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => url_path
+)
+
+0.29843900 1403860181mg__eav_attribute
+0.29859000 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => is_active
+)
+
+0.29865500 1403860181mg__eav_attribute
+0.29880600 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => is_anchor
+)
+
+0.29886200 1403860181mg__eav_attribute
+0.29901300 1403860181SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+Array
+(
+    [0] => 3
+    [1] => include_in_menu
+)
+
+0.29959600 1403860181mg__catalog_product_entity
+0.29963000 1403860181mg__catalog_category_entity
+0.29966800 1403860181mg__catalog_category_product
+0.29969900 1403860181mg__catalog_product_website
+0.29973000 1403860181mg__core_store
+0.29975900 1403860181mg__core_store_group
+0.29978900 1403860181mg__catalog_product_entity_varchar
+0.29981900 1403860181mg__catalog_product_entity_int
+0.29984800 1403860181mg__catalog_category_entity_varchar
+0.29987900 1403860181mg__eav_attribute
+0.29990800 1403860181mg__catalog_category_product_index
+0.29993800 1403860181mg__core_url_rewrite
+0.29997900 1403860181mg__eav_entity_type
+0.30012700 1403860181SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?
+Array
+(
+    [0] => catalog_product
+)
+
+0.30018300 1403860181mg__eav_attribute
+0.30021700 1403860181mg__catalog_eav_attribute
+0.30038100 1403860181SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?)) AND (entity_type_id=?)
+Array
+(
+    [0] => visibility
+    [1] => 4
+)
+
+0.30132200 1403860181mg__eav_entity_type
+0.30143500 1403860181SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?
+Array
+(
+    [0] => catalog_product
+)
+
+0.30147800 1403860181mg__eav_attribute_set
+0.30159400 1403860181SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?
+Array
+(
+    [0] => Default
+    [1] => 4
+)
+
+0.30228500 1403860181mg__eav_attribute
+0.30240900 1403860181SELECT attribute_code FROM mg_eav_attribute WHERE  is_required=1
+		AND frontend_input!='' AND frontend_label!='' AND entity_type_id=?
+Array
+(
+    [0] => 4
+)
+
+0.30249200 1403860181mg__eav_attribute
+0.30252400 1403860181mg__catalog_eav_attribute
+0.30269700 1403860181SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)) AND (entity_type_id=?)
+Array
+(
+    [0] => sku
+    [1] => attribute_set
+    [2] => product_type_id
+    [3] => type
+    [4] => category_ids
+    [5] => name
+    [6] => media_gallery
+    [7] => image
+    [8] => small_image
+    [9] => thumbnail
+    [10] => material
+    [11] => qty
+    [12] => special_price
+    [13] => price
+    [14] => description
+    [15] => short_description
+    [16] => tax_class_id
+    [17] => is_in_stock
+    [18] => template
+    [19] => customization
+    [20] => links
+    [21] => store
+    [22] => status
+    [23] => page_layout
+    [24] => 4
+)
+
+0.30318300 1403860181-- TRANSACTION BEGIN --
+0.30352500 1403860181mg__catalog_product_entity
+0.30390400 1403860181SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?
+Array
+(
+    [0] => down-test-1
+)
+
+0.30396200 1403860181mg__eav_attribute_set
+0.30441400 1403860181SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?
+Array
+(
+    [0] => all
+    [1] => 4
+)
+
+0.30446900 1403860181mg__catalog_product_entity
+0.30452600 1403860181mg__catalog_product_entity
+0.30521600 1403860181DESCRIBE mg_catalog_product_entity
+
+0.32278300 1403860181INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)
+Array
+(
+    [0] => down-test-1
+    [1] => downloadable
+    [2] => 25
+    [3] => 4
+    [4] => 2014-06-27 04:09:41
+    [5] => 2014-06-27 04:09:41
+)
+
+0.32308600 1403860181mg__downloadable_link
+0.32606800 1403860181-- TRANSACTION ROLLBACK --
+0.32657800 1403860181-- TRANSACTION BEGIN --
+0.32694400 1403860181mg__catalog_product_entity
+0.32727100 1403860181SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?
+Array
+(
+    [0] => down-test-2
+)
+
+0.32735400 1403860181mg__catalog_product_entity
+0.33389900 1403860181INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)
+Array
+(
+    [0] => down-test-2
+    [1] => downloadable
+    [2] => 25
+    [3] => 4
+    [4] => 2014-06-27 04:09:41
+    [5] => 2014-06-27 04:09:41
+)
+
+0.33415700 1403860181mg__downloadable_link
+0.33506600 1403860181-- TRANSACTION ROLLBACK --
+0.33560700 1403860181-- TRANSACTION BEGIN --
+0.33595000 1403860181mg__catalog_product_entity
+0.33628000 1403860181SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?
+Array
+(
+    [0] => down-test-3
+)
+
+0.33634800 1403860181mg__catalog_product_entity
+0.34587900 1403860181INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)
+Array
+(
+    [0] => down-test-3
+    [1] => downloadable
+    [2] => 25
+    [3] => 4
+    [4] => 2014-06-27 04:09:41
+    [5] => 2014-06-27 04:09:41
+)
+
+0.34611600 1403860181mg__downloadable_link
+0.34677200 1403860181-- TRANSACTION ROLLBACK --
+0.34720300 1403860181mg__catalog_product_entity_media_gallery
+0.34723900 1403860181mg__catalog_product_entity_media_gallery_value
+0.35375200 1403860181DELETE emg.* FROM mg_catalog_product_entity_media_gallery as emg
+			LEFT JOIN (SELECT emg.value_id,count(emgv.value_id) as cnt FROM  mg_catalog_product_entity_media_gallery_value as emgv JOIN mg_catalog_product_entity_media_gallery as emg  ON emg.value_id=emgv.value_id GROUP BY emg.value_id ) as t1 ON t1.value_id=emg.value_id
+			WHERE attribute_id IN (85,86,87) AND t1.cnt IS NULL
+
+0.35406800 1403860181mg__catalog_product_flat
+0.35551500 1403860181SHOW TABLES LIKE 'mg_catalog_product_flat%'
+
+0.35556600 1403860181mg__catalog_product_entity
+0.36339200 1403860181DELETE cpf.* FROM mg_catalog_product_flat_1 as cpf
+			LEFT JOIN mg_catalog_product_entity as cpe ON cpe.entity_id=cpf.entity_id 
+			WHERE cpe.entity_id IS NULL
+

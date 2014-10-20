@@ -1,0 +1,3689 @@
+---- TRACE : 1 -----
+---- DATE : 2014-06-27 04:09:41 ------
+************************************
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist
+*************************************
+/inc/dbhelper.class.php:239 - PDOStatement->execute
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [0] => 10387
+        )
+
+)
+
+/inc/dbhelper.class.php:324 - DBHelper->exec_stmt
+----------------------------------------
+Array
+(
+    [0] => select * from downloadable_link where product_id = ?
+    [1] => Array
+        (
+            [0] => 10387
+        )
+
+    [2] => 
+)
+
+/inc/dbhelper.class.php:366 - DBHelper->select
+----------------------------------------
+Array
+(
+    [0] => select * from downloadable_link where product_id = ?
+    [1] => Array
+        (
+            [0] => 10387
+        )
+
+)
+
+/inc/magmi_mixin.php:36 - /plugins/extra/itemprocessors/downloadable/downloadableprocessor.php:246 - Magmi_Mixin->__call
+----------------------------------------
+Array
+(
+    [0] => selectAll
+    [1] => Array
+        (
+            [0] => select * from downloadable_link where product_id = ?
+            [1] => Array
+                (
+                    [0] => 10387
+                )
+
+        )
+
+)
+
+/plugins/extra/itemprocessors/downloadable/downloadableprocessor.php:246 - DownloadableProcessor->selectAll
+----------------------------------------
+Array
+(
+    [0] => select * from downloadable_link where product_id = ?
+    [1] => Array
+        (
+            [0] => 10387
+        )
+
+)
+
+/plugins/extra/itemprocessors/downloadable/downloadableprocessor.php:61 - DownloadableProcessor->getExistingLinks
+----------------------------------------
+Array
+(
+    [0] => 10387
+)
+
+/inc/magmi_engine.php:323 - DownloadableProcessor->processItemAfterId
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [sku] => down-test-1
+            [attribute_set] => all
+            [product_type_id] => downloadable
+            [type] => downloadable
+            [category_ids] => 5
+            [name] => Downlodable Test Product
+            [media_gallery] => /desert.jpg;/jellyfish.jpg;
+            [image] => /desert.jpg
+            [small_image] => /desert.jpg
+            [thumbnail] => /desert.jpg
+            [material] => 100% COTTON
+            [qty] => 25
+            [special_price] => 10
+            [price] => 12
+            [description] => <p>
+   This style comes in US Size. Please check our size measurement.</p>
+  <p>
+   <strong>Size Chart:</strong></p>
+  <ul>
+   <li>
+    Small - - - - 18"~19" (Width) - - - 27" (Length)</li>
+   <li>
+    Medium - - - 20"~21" (Width) - - - 28" (Length)</li>
+   <li>
+    Large - - - - 22"~23" (Width) - - - 29" (Length)</li>
+   <li>
+    X-Large - - - 24"~25" (Width) - - - 30" (Length)</li>
+   <li>
+    XX-Large - - 26"~27" (Width) - - - 31" (Length)</li>
+  </ul>
+  <p>
+   *All conversions are approximate. Fits may vary by style or personal preference; sizes may vary by manufacturer.</p> 
+            [short_description] => <li>Hand Wash Cold with Like Colors</li><li>Do Not Tumble Dry</li><li>Detachable Hoodie Makes 2 Different Style</li><li>Two Front Hand Pockets / Buttoned Pockets</li><li>Studded Detail Button Down Vest</li>
+            [tax_class_id] => Taxable Goods
+            [visibility] => 4
+            [is_in_stock] => 1
+            [template] => Microsoft Word/Office (MAC/Windows)
+            [customization] => No Customization (Template Only)
+            [links] => file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+        )
+
+    [1] => Array
+        (
+            [product_id] => 10387
+            [new] => 1
+            [same] => 
+            [asid] => 25
+            [pid] => 
+            [sku] => down-test-1
+            [type] => downloadable
+            [__new] => 1
+        )
+
+)
+
+/engines/magmi_productimportengine.php:1525 - Magmi_Engine->callPlugins
+----------------------------------------
+Array
+(
+    [0] => itemprocessors
+    [1] => processItemAfterId
+    [2] => Array
+        (
+            [sku] => down-test-1
+            [attribute_set] => all
+            [product_type_id] => downloadable
+            [type] => downloadable
+            [category_ids] => 5
+            [name] => Downlodable Test Product
+            [media_gallery] => /desert.jpg;/jellyfish.jpg;
+            [image] => /desert.jpg
+            [small_image] => /desert.jpg
+            [thumbnail] => /desert.jpg
+            [material] => 100% COTTON
+            [qty] => 25
+            [special_price] => 10
+            [price] => 12
+            [description] => <p>
+   This style comes in US Size. Please check our size measurement.</p>
+  <p>
+   <strong>Size Chart:</strong></p>
+  <ul>
+   <li>
+    Small - - - - 18"~19" (Width) - - - 27" (Length)</li>
+   <li>
+    Medium - - - 20"~21" (Width) - - - 28" (Length)</li>
+   <li>
+    Large - - - - 22"~23" (Width) - - - 29" (Length)</li>
+   <li>
+    X-Large - - - 24"~25" (Width) - - - 30" (Length)</li>
+   <li>
+    XX-Large - - 26"~27" (Width) - - - 31" (Length)</li>
+  </ul>
+  <p>
+   *All conversions are approximate. Fits may vary by style or personal preference; sizes may vary by manufacturer.</p> 
+            [short_description] => <li>Hand Wash Cold with Like Colors</li><li>Do Not Tumble Dry</li><li>Detachable Hoodie Makes 2 Different Style</li><li>Two Front Hand Pockets / Buttoned Pockets</li><li>Studded Detail Button Down Vest</li>
+            [tax_class_id] => Taxable Goods
+            [visibility] => 4
+            [is_in_stock] => 1
+            [template] => Microsoft Word/Office (MAC/Windows)
+            [customization] => No Customization (Template Only)
+            [links] => file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+        )
+
+    [3] => Array
+        (
+            [product_id] => 10387
+            [new] => 1
+            [same] => 
+            [asid] => 25
+            [pid] => 
+            [sku] => down-test-1
+            [type] => downloadable
+            [__new] => 1
+        )
+
+)
+
+/engines/magmi_productimportengine.php:1768 - Magmi_ProductImportEngine->importItem
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [sku] => down-test-1
+            [attribute_set] => all
+            [product_type_id] => downloadable
+            [type] => downloadable
+            [category_ids] => 5
+            [name] => Downlodable Test Product
+            [media_gallery] => /desert.jpg;/jellyfish.jpg;
+            [image] => /desert.jpg
+            [small_image] => /desert.jpg
+            [thumbnail] => /desert.jpg
+            [material] => 100% COTTON
+            [qty] => 25
+            [special_price] => 10
+            [price] => 12
+            [description] => <p>
+   This style comes in US Size. Please check our size measurement.</p>
+  <p>
+   <strong>Size Chart:</strong></p>
+  <ul>
+   <li>
+    Small - - - - 18"~19" (Width) - - - 27" (Length)</li>
+   <li>
+    Medium - - - 20"~21" (Width) - - - 28" (Length)</li>
+   <li>
+    Large - - - - 22"~23" (Width) - - - 29" (Length)</li>
+   <li>
+    X-Large - - - 24"~25" (Width) - - - 30" (Length)</li>
+   <li>
+    XX-Large - - 26"~27" (Width) - - - 31" (Length)</li>
+  </ul>
+  <p>
+   *All conversions are approximate. Fits may vary by style or personal preference; sizes may vary by manufacturer.</p> 
+            [short_description] => <li>Hand Wash Cold with Like Colors</li><li>Do Not Tumble Dry</li><li>Detachable Hoodie Makes 2 Different Style</li><li>Two Front Hand Pockets / Buttoned Pockets</li><li>Studded Detail Button Down Vest</li>
+            [tax_class_id] => Taxable Goods
+            [visibility] => 4
+            [is_in_stock] => 1
+            [template] => Microsoft Word/Office (MAC/Windows)
+            [customization] => No Customization (Template Only)
+            [links] => file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+        )
+
+)
+
+/engines/magmi_productimportengine.php:1865 - Magmi_ProductImportEngine->processDataSourceLine
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [sku] => down-test-1
+            [attribute_set] => all
+            [product_type_id] => downloadable
+            [type] => downloadable
+            [category_ids] => 5
+            [name] => Downlodable Test Product
+            [media_gallery] => /desert.jpg;/jellyfish.jpg;
+            [image] => /desert.jpg
+            [small_image] => /desert.jpg
+            [thumbnail] => /desert.jpg
+            [material] => 100% COTTON
+            [qty] => 25
+            [special_price] => 10
+            [price] => 12
+            [description] => <p>
+   This style comes in US Size. Please check our size measurement.</p>
+  <p>
+   <strong>Size Chart:</strong></p>
+  <ul>
+   <li>
+    Small - - - - 18"~19" (Width) - - - 27" (Length)</li>
+   <li>
+    Medium - - - 20"~21" (Width) - - - 28" (Length)</li>
+   <li>
+    Large - - - - 22"~23" (Width) - - - 29" (Length)</li>
+   <li>
+    X-Large - - - 24"~25" (Width) - - - 30" (Length)</li>
+   <li>
+    XX-Large - - 26"~27" (Width) - - - 31" (Length)</li>
+  </ul>
+  <p>
+   *All conversions are approximate. Fits may vary by style or personal preference; sizes may vary by manufacturer.</p> 
+            [short_description] => <li>Hand Wash Cold with Like Colors</li><li>Do Not Tumble Dry</li><li>Detachable Hoodie Makes 2 Different Style</li><li>Two Front Hand Pockets / Buttoned Pockets</li><li>Studded Detail Button Down Vest</li>
+            [tax_class_id] => Taxable Goods
+            [visibility] => 4
+            [is_in_stock] => 1
+            [template] => Microsoft Word/Office (MAC/Windows)
+            [customization] => No Customization (Template Only)
+            [links] => file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+        )
+
+    [1] => 1
+    [2] => 1403860181.3029
+    [3] => 1403860181.3031
+    [4] => 0
+    [5] => 0
+)
+
+/inc/magmi_engine.php:485 - Magmi_ProductImportEngine->engineRun
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+            [ts] => 1403860168
+            [run] => import
+            [logfile] => progress.txt
+            [profile] => p3
+            [mode] => create
+            [frontend] => f57f37d63b98f462e5b7144291dac04b
+            [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+            [epc-initiated] => 1
+            [epc-ic] => 53ad31af
+            [epc-no-primary-cache] => 1
+            [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+            [__atuvc] => 15|23,4|24,2|25,4|26
+            [lc_window_state] => minimized
+            [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+        )
+
+)
+
+/web/magmi_run.php:44 - Magmi_Engine->run
+----------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+            [ts] => 1403860168
+            [run] => import
+            [logfile] => progress.txt
+            [profile] => p3
+            [mode] => create
+            [frontend] => f57f37d63b98f462e5b7144291dac04b
+            [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+            [epc-initiated] => 1
+            [epc-ic] => 53ad31af
+            [epc-no-primary-cache] => 1
+            [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+            [__atuvc] => 15|23,4|24,2|25,4|26
+            [lc_window_state] => minimized
+            [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+        )
+
+)
+
++++++++++++++++++++++++++++++
+CONTEXT DUMP
++++++++++++++++++++++++++++++
+Magmi_ProductImportEngine Object
+(
+    [attrinfo] => Array
+        (
+            [visibility] => Array
+                (
+                    [attribute_id] => 102
+                    [entity_type_id] => 4
+                    [attribute_code] => visibility
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => int
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Visibility
+                    [frontend_class] => 
+                    [source_model] => catalog/product_visibility
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 4
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [category_ids] => Array
+                (
+                    [attribute_id] => 108
+                    [entity_type_id] => 4
+                    [attribute_code] => category_ids
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => static
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => text
+                    [frontend_label] => 
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 1
+                    [apply_to] => 
+                )
+
+            [customization] => Array
+                (
+                    [attribute_id] => 139
+                    [entity_type_id] => 4
+                    [attribute_code] => customization
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => int
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Add Customization Service: (We put together the invitation for you)
+                    [frontend_class] => 
+                    [source_model] => eav/entity_attribute_source_table
+                    [is_required] => 0
+                    [is_user_defined] => 1
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 1
+                    [apply_to] => downloadable
+                )
+
+            [description] => Array
+                (
+                    [attribute_id] => 72
+                    [entity_type_id] => 4
+                    [attribute_code] => description
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => text
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => textarea
+                    [frontend_label] => Description
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [image] => Array
+                (
+                    [attribute_id] => 85
+                    [entity_type_id] => 4
+                    [attribute_code] => image
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => catalog/product_attribute_frontend_image
+                    [frontend_input] => media_image
+                    [frontend_label] => Base Image
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [media_gallery] => Array
+                (
+                    [attribute_id] => 88
+                    [entity_type_id] => 4
+                    [attribute_code] => media_gallery
+                    [attribute_model] => 
+                    [backend_model] => catalog/product_attribute_backend_media
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => gallery
+                    [frontend_label] => Media Gallery
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 1
+                    [apply_to] => 
+                )
+
+            [name] => Array
+                (
+                    [attribute_id] => 71
+                    [entity_type_id] => 4
+                    [attribute_code] => name
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => text
+                    [frontend_label] => Name
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [page_layout] => Array
+                (
+                    [attribute_id] => 107
+                    [entity_type_id] => 4
+                    [attribute_code] => page_layout
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Page Layout
+                    [frontend_class] => 
+                    [source_model] => catalog/product_attribute_source_layout
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [price] => Array
+                (
+                    [attribute_id] => 75
+                    [entity_type_id] => 4
+                    [attribute_code] => price
+                    [attribute_model] => 
+                    [backend_model] => catalog/product_attribute_backend_price
+                    [backend_type] => decimal
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => price
+                    [frontend_label] => Price
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 2
+                    [apply_to] => simple,configurable,virtual,bundle,downloadable
+                )
+
+            [short_description] => Array
+                (
+                    [attribute_id] => 73
+                    [entity_type_id] => 4
+                    [attribute_code] => short_description
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => text
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => textarea
+                    [frontend_label] => Short Description
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [sku] => Array
+                (
+                    [attribute_id] => 74
+                    [entity_type_id] => 4
+                    [attribute_code] => sku
+                    [attribute_model] => 
+                    [backend_model] => catalog/product_attribute_backend_sku
+                    [backend_type] => static
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => text
+                    [frontend_label] => SKU
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 1
+                    [note] => 
+                    [is_global] => 1
+                    [apply_to] => 
+                )
+
+            [small_image] => Array
+                (
+                    [attribute_id] => 86
+                    [entity_type_id] => 4
+                    [attribute_code] => small_image
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => catalog/product_attribute_frontend_image
+                    [frontend_input] => media_image
+                    [frontend_label] => Small Image
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+            [special_price] => Array
+                (
+                    [attribute_id] => 76
+                    [entity_type_id] => 4
+                    [attribute_code] => special_price
+                    [attribute_model] => 
+                    [backend_model] => catalog/product_attribute_backend_price
+                    [backend_type] => decimal
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => price
+                    [frontend_label] => Special Price
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 2
+                    [apply_to] => simple,configurable,virtual,bundle,downloadable
+                )
+
+            [status] => Array
+                (
+                    [attribute_id] => 96
+                    [entity_type_id] => 4
+                    [attribute_code] => status
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => int
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Status
+                    [frontend_class] => 
+                    [source_model] => catalog/product_status
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 2
+                    [apply_to] => 
+                )
+
+            [tax_class_id] => Array
+                (
+                    [attribute_id] => 121
+                    [entity_type_id] => 4
+                    [attribute_code] => tax_class_id
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => int
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Tax Class
+                    [frontend_class] => 
+                    [source_model] => tax/class_source_product
+                    [is_required] => 1
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 2
+                    [apply_to] => simple,configurable,virtual,downloadable,bundle
+                )
+
+            [template] => Array
+                (
+                    [attribute_id] => 136
+                    [entity_type_id] => 4
+                    [attribute_code] => template
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => int
+                    [backend_table] => 
+                    [frontend_model] => 
+                    [frontend_input] => select
+                    [frontend_label] => Template Type
+                    [frontend_class] => 
+                    [source_model] => eav/entity_attribute_source_table
+                    [is_required] => 1
+                    [is_user_defined] => 1
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 1
+                    [apply_to] => configurable,downloadable
+                )
+
+            [thumbnail] => Array
+                (
+                    [attribute_id] => 87
+                    [entity_type_id] => 4
+                    [attribute_code] => thumbnail
+                    [attribute_model] => 
+                    [backend_model] => 
+                    [backend_type] => varchar
+                    [backend_table] => 
+                    [frontend_model] => catalog/product_attribute_frontend_image
+                    [frontend_input] => media_image
+                    [frontend_label] => Thumbnail
+                    [frontend_class] => 
+                    [source_model] => 
+                    [is_required] => 0
+                    [is_user_defined] => 0
+                    [default_value] => 
+                    [is_unique] => 0
+                    [note] => 
+                    [is_global] => 0
+                    [apply_to] => 
+                )
+
+        )
+
+    [attrbytype] => Array
+        (
+            [int] => Array
+                (
+                    [data] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [attribute_id] => 102
+                                    [entity_type_id] => 4
+                                    [attribute_code] => visibility
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Visibility
+                                    [frontend_class] => 
+                                    [source_model] => catalog/product_visibility
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 4
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [attribute_id] => 139
+                                    [entity_type_id] => 4
+                                    [attribute_code] => customization
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Add Customization Service: (We put together the invitation for you)
+                                    [frontend_class] => 
+                                    [source_model] => eav/entity_attribute_source_table
+                                    [is_required] => 0
+                                    [is_user_defined] => 1
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 1
+                                    [apply_to] => downloadable
+                                )
+
+                            [2] => Array
+                                (
+                                    [attribute_id] => 96
+                                    [entity_type_id] => 4
+                                    [attribute_code] => status
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Status
+                                    [frontend_class] => 
+                                    [source_model] => catalog/product_status
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 2
+                                    [apply_to] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [attribute_id] => 121
+                                    [entity_type_id] => 4
+                                    [attribute_code] => tax_class_id
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Tax Class
+                                    [frontend_class] => 
+                                    [source_model] => tax/class_source_product
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 2
+                                    [apply_to] => simple,configurable,virtual,downloadable,bundle
+                                )
+
+                            [4] => Array
+                                (
+                                    [attribute_id] => 136
+                                    [entity_type_id] => 4
+                                    [attribute_code] => template
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Template Type
+                                    [frontend_class] => 
+                                    [source_model] => eav/entity_attribute_source_table
+                                    [is_required] => 1
+                                    [is_user_defined] => 1
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 1
+                                    [apply_to] => configurable,downloadable
+                                )
+
+                        )
+
+                    [ids] => 102,139,96,121,136
+                )
+
+            [static] => Array
+                (
+                    [data] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [attribute_id] => 108
+                                    [entity_type_id] => 4
+                                    [attribute_code] => category_ids
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => static
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => text
+                                    [frontend_label] => 
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 1
+                                    [apply_to] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [attribute_id] => 74
+                                    [entity_type_id] => 4
+                                    [attribute_code] => sku
+                                    [attribute_model] => 
+                                    [backend_model] => catalog/product_attribute_backend_sku
+                                    [backend_type] => static
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => text
+                                    [frontend_label] => SKU
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 1
+                                    [note] => 
+                                    [is_global] => 1
+                                    [apply_to] => 
+                                )
+
+                        )
+
+                    [ids] => 108,74
+                )
+
+            [text] => Array
+                (
+                    [data] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [attribute_id] => 72
+                                    [entity_type_id] => 4
+                                    [attribute_code] => description
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => text
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => textarea
+                                    [frontend_label] => Description
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [attribute_id] => 73
+                                    [entity_type_id] => 4
+                                    [attribute_code] => short_description
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => text
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => textarea
+                                    [frontend_label] => Short Description
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                        )
+
+                    [ids] => 72,73
+                )
+
+            [varchar] => Array
+                (
+                    [data] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [attribute_id] => 85
+                                    [entity_type_id] => 4
+                                    [attribute_code] => image
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => catalog/product_attribute_frontend_image
+                                    [frontend_input] => media_image
+                                    [frontend_label] => Base Image
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [attribute_id] => 88
+                                    [entity_type_id] => 4
+                                    [attribute_code] => media_gallery
+                                    [attribute_model] => 
+                                    [backend_model] => catalog/product_attribute_backend_media
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => gallery
+                                    [frontend_label] => Media Gallery
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 1
+                                    [apply_to] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [attribute_id] => 71
+                                    [entity_type_id] => 4
+                                    [attribute_code] => name
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => text
+                                    [frontend_label] => Name
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [attribute_id] => 107
+                                    [entity_type_id] => 4
+                                    [attribute_code] => page_layout
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Page Layout
+                                    [frontend_class] => 
+                                    [source_model] => catalog/product_attribute_source_layout
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [attribute_id] => 86
+                                    [entity_type_id] => 4
+                                    [attribute_code] => small_image
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => catalog/product_attribute_frontend_image
+                                    [frontend_input] => media_image
+                                    [frontend_label] => Small Image
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [attribute_id] => 87
+                                    [entity_type_id] => 4
+                                    [attribute_code] => thumbnail
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => varchar
+                                    [backend_table] => 
+                                    [frontend_model] => catalog/product_attribute_frontend_image
+                                    [frontend_input] => media_image
+                                    [frontend_label] => Thumbnail
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                        )
+
+                    [ids] => 85,88,71,107,86,87
+                )
+
+            [decimal] => Array
+                (
+                    [data] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [attribute_id] => 75
+                                    [entity_type_id] => 4
+                                    [attribute_code] => price
+                                    [attribute_model] => 
+                                    [backend_model] => catalog/product_attribute_backend_price
+                                    [backend_type] => decimal
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => price
+                                    [frontend_label] => Price
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 2
+                                    [apply_to] => simple,configurable,virtual,bundle,downloadable
+                                )
+
+                            [1] => Array
+                                (
+                                    [attribute_id] => 76
+                                    [entity_type_id] => 4
+                                    [attribute_code] => special_price
+                                    [attribute_model] => 
+                                    [backend_model] => catalog/product_attribute_backend_price
+                                    [backend_type] => decimal
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => price
+                                    [frontend_label] => Special Price
+                                    [frontend_class] => 
+                                    [source_model] => 
+                                    [is_required] => 0
+                                    [is_user_defined] => 0
+                                    [default_value] => 
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 2
+                                    [apply_to] => simple,configurable,virtual,bundle,downloadable
+                                )
+
+                        )
+
+                    [ids] => 75,76
+                )
+
+        )
+
+    [attribute_sets] => Array
+        (
+            [Default] => 4
+            [all] => 25
+        )
+
+    [prod_etype] => 4
+    [default_asid] => 4
+    [sidcache] => Array
+        (
+        )
+
+    [mode] => create
+    [_notattribs:Magmi_ProductImportEngine:private] => Array
+        (
+            [1] => attribute_set
+            [2] => product_type_id
+            [3] => type
+            [10] => material
+            [11] => qty
+            [18] => is_in_stock
+            [21] => links
+            [22] => store
+        )
+
+    [_attributehandlers:Magmi_ProductImportEngine:private] => Array
+        (
+            [frontend_input:(media_image|gallery)] => ImageAttributeItemProcessor Object
+                (
+                    [forcename:protected] => 
+                    [magdir:protected] => /home/celebr28/public_html
+                    [imgsourcedirs:protected] => Array
+                        (
+                        )
+
+                    [errattrs:protected] => Array
+                        (
+                        )
+
+                    [_errorimgs:protected] => Array
+                        (
+                        )
+
+                    [_lastimage:protected] => 
+                    [_handled_attributes:protected] => Array
+                        (
+                        )
+
+                    [_img_baseattrs:protected] => Array
+                        (
+                            [0] => image
+                            [1] => small_image
+                            [2] => thumbnail
+                        )
+
+                    [_active:protected] => 1
+                    [_newitem:protected] => 
+                    [_mdh:protected] => LocalMagentoDirHandler Object
+                        (
+                            [_rfgid:protected] => image
+                            [_magdir:protected] => /home/celebr28/public_html
+                            [_lasterror:protected] => Array
+                                (
+                                )
+
+                            [_exec_mode:protected] => popen
+                        )
+
+                    [_remoteroot:protected] => 
+                    [debug:protected] => no
+                    [_class:protected] => ImageAttributeItemProcessor
+                    [_plugintype:protected] => 
+                    [_plugindir:protected] => 
+                    [_config:protected] => Magmi_PluginConfig Object
+                        (
+                            [_prefix:protected] => ImageAttributeItemProcessor
+                            [_conffile:protected] => 
+                            [_profile:protected] => p3
+                            [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                            [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/ImageAttributeItemProcessor.conf
+                            [_props:protected] => Array
+                                (
+                                    [ImageAttributeItemProcessor] => Array
+                                        (
+                                            [IMG:sourcedir] => media/import
+                                            [IMG:renaming] => 
+                                            [IMG:writemode] => keep
+                                            [IMG:existingonly] => no
+                                            [IMG:debug] => no
+                                            [IMG:remoteroot] => 
+                                            [IMG:remoteuser] => 
+                                            [IMG:remotepass] => 
+                                            [IMG:predlcheck] => yes
+                                        )
+
+                                )
+
+                            [inifile] => /home/celebr28/public_html/magmi/conf/p3/ImageAttributeItemProcessor.conf
+                            [_specialchars:protected] => Array
+                                (
+                                    ["] => :DQUOTE:
+                                    ['] => :SQUOTE:
+                                    [\t] => TAB
+                                )
+
+                        )
+
+                    [_magmiconfig:protected] => Magmi_Config Object
+                        (
+                            [_defaultconfigname:Magmi_Config:private] => 
+                            [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                            [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                            [_props:protected] => Array
+                                (
+                                    [DATABASE] => Array
+                                        (
+                                            [connectivity] => net
+                                            [host] => localhost
+                                            [port] => 3306
+                                            [unix_socket] => /var/lib/mysql/mysql.sock
+                                            [dbname] => celebr28_mage867
+                                            [user] => celebr28_mage867
+                                            [password] => (O8Pn-3S9N
+                                            [table_prefix] => mg_
+                                        )
+
+                                    [MAGENTO] => Array
+                                        (
+                                            [version] => 1.7.x
+                                            [basedir] => /home/celebr28/public_html/
+                                        )
+
+                                    [GLOBAL] => Array
+                                        (
+                                            [step] => 0.5
+                                            [multiselect_sep] => ,
+                                            [dirmask] => 755
+                                            [filemask] => 644
+                                        )
+
+                                )
+
+                            [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                            [_specialchars:protected] => Array
+                                (
+                                    ["] => :DQUOTE:
+                                    ['] => :SQUOTE:
+                                    [\t] => TAB
+                                )
+
+                        )
+
+                    [_pluginmeta:protected] => Array
+                        (
+                            [class] => ImageAttributeItemProcessor
+                            [dir] => /home/celebr28/public_html/magmi/plugins/extra/itemprocessors/imageprocessor
+                            [file] => imageitattributeemprocessor.php
+                        )
+
+                    [_callers:protected] => Array
+                        (
+                            [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                        )
+
+                    [_params] => Array
+                        (
+                            [IMG:sourcedir] => media/import
+                            [IMG:renaming] => 
+                            [IMG:writemode] => keep
+                            [IMG:existingonly] => no
+                            [IMG:debug] => no
+                            [IMG:remoteroot] => 
+                            [IMG:remoteuser] => 
+                            [IMG:remotepass] => 
+                            [IMG:predlcheck] => yes
+                            [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                            [ts] => 1403860168
+                            [run] => import
+                            [logfile] => progress.txt
+                            [profile] => p3
+                            [mode] => create
+                            [frontend] => f57f37d63b98f462e5b7144291dac04b
+                            [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                            [epc-initiated] => 1
+                            [epc-ic] => 53ad31af
+                            [epc-no-primary-cache] => 1
+                            [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                            [__atuvc] => 15|23,4|24,2|25,4|26
+                            [lc_window_state] => minimized
+                            [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                        )
+
+                )
+
+            [attribute_code:.*] => Magmi_DefaultAttributeItemProcessor Object
+                (
+                    [_basecols:protected] => Array
+                        (
+                            [store] => admin
+                            [type] => simple
+                        )
+
+                    [_baseattrs:protected] => Array
+                        (
+                            [status] => 1
+                            [visibility] => 4
+                            [page_layout] => 
+                            [tax_class_id] => Taxable Goods
+                        )
+
+                    [_forcedefault:protected] => Array
+                        (
+                            [store] => admin
+                        )
+
+                    [_missingcols:protected] => Array
+                        (
+                            [0] => store
+                        )
+
+                    [_missingattrs:protected] => Array
+                        (
+                            [0] => status
+                            [2] => page_layout
+                        )
+
+                    [_class:protected] => Magmi_DefaultAttributeItemProcessor
+                    [_plugintype:protected] => 
+                    [_plugindir:protected] => 
+                    [_config:protected] => Magmi_PluginConfig Object
+                        (
+                            [_prefix:protected] => Magmi_DefaultAttributeItemProcessor
+                            [_conffile:protected] => 
+                            [_profile:protected] => p3
+                            [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                            [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/Magmi_DefaultAttributeItemProcessor.conf
+                            [_props:protected] => 
+                            [inifile] => 
+                            [_specialchars:protected] => Array
+                                (
+                                    ["] => :DQUOTE:
+                                    ['] => :SQUOTE:
+                                    [\t] => TAB
+                                )
+
+                        )
+
+                    [_magmiconfig:protected] => Magmi_Config Object
+                        (
+                            [_defaultconfigname:Magmi_Config:private] => 
+                            [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                            [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                            [_props:protected] => Array
+                                (
+                                    [DATABASE] => Array
+                                        (
+                                            [connectivity] => net
+                                            [host] => localhost
+                                            [port] => 3306
+                                            [unix_socket] => /var/lib/mysql/mysql.sock
+                                            [dbname] => celebr28_mage867
+                                            [user] => celebr28_mage867
+                                            [password] => (O8Pn-3S9N
+                                            [table_prefix] => mg_
+                                        )
+
+                                    [MAGENTO] => Array
+                                        (
+                                            [version] => 1.7.x
+                                            [basedir] => /home/celebr28/public_html/
+                                        )
+
+                                    [GLOBAL] => Array
+                                        (
+                                            [step] => 0.5
+                                            [multiselect_sep] => ,
+                                            [dirmask] => 755
+                                            [filemask] => 644
+                                        )
+
+                                )
+
+                            [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                            [_specialchars:protected] => Array
+                                (
+                                    ["] => :DQUOTE:
+                                    ['] => :SQUOTE:
+                                    [\t] => TAB
+                                )
+
+                        )
+
+                    [_pluginmeta:protected] => 
+                    [_callers:protected] => Array
+                        (
+                            [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                        )
+
+                    [_params] => Array
+                        (
+                            [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                            [ts] => 1403860168
+                            [run] => import
+                            [logfile] => progress.txt
+                            [profile] => p3
+                            [mode] => create
+                            [frontend] => f57f37d63b98f462e5b7144291dac04b
+                            [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                            [epc-initiated] => 1
+                            [epc-ic] => 53ad31af
+                            [epc-no-primary-cache] => 1
+                            [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                            [__atuvc] => 15|23,4|24,2|25,4|26
+                            [lc_window_state] => minimized
+                            [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                        )
+
+                )
+
+        )
+
+    [_current_row:Magmi_ProductImportEngine:private] => 1
+    [_curitemids:Magmi_ProductImportEngine:private] => Array
+        (
+            [pid] => 10387
+            [sku] => down-test-1
+            [asid] => 25
+            [type] => downloadable
+            [__new] => 1
+        )
+
+    [_dstore:Magmi_ProductImportEngine:private] => Array
+        (
+            [0] => 0
+        )
+
+    [_same:Magmi_ProductImportEngine:private] => 
+    [_currentpid:Magmi_ProductImportEngine:private] => 
+    [_extra_attrs:Magmi_ProductImportEngine:private] => 
+    [_profile:Magmi_ProductImportEngine:private] => p3
+    [_sid_wsscope:Magmi_ProductImportEngine:private] => Array
+        (
+        )
+
+    [_sid_sscope:Magmi_ProductImportEngine:private] => Array
+        (
+        )
+
+    [_prodcols:Magmi_ProductImportEngine:private] => Array
+        (
+            [0] => entity_id
+            [1] => entity_type_id
+            [2] => attribute_set_id
+            [3] => type_id
+            [4] => sku
+            [5] => has_options
+            [6] => required_options
+            [7] => created_at
+            [8] => updated_at
+        )
+
+    [_stockcols:Magmi_ProductImportEngine:private] => Array
+        (
+        )
+
+    [_skustats:Magmi_ProductImportEngine:private] => Array
+        (
+            [nsku] => 0
+            [ok] => 0
+            [ko] => 0
+        )
+
+    [_conf:protected] => Magmi_Config Object
+        (
+            [_defaultconfigname:Magmi_Config:private] => 
+            [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+            [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+            [_props:protected] => Array
+                (
+                    [DATABASE] => Array
+                        (
+                            [connectivity] => net
+                            [host] => localhost
+                            [port] => 3306
+                            [unix_socket] => /var/lib/mysql/mysql.sock
+                            [dbname] => celebr28_mage867
+                            [user] => celebr28_mage867
+                            [password] => (O8Pn-3S9N
+                            [table_prefix] => mg_
+                        )
+
+                    [MAGENTO] => Array
+                        (
+                            [version] => 1.7.x
+                            [basedir] => /home/celebr28/public_html/
+                        )
+
+                    [GLOBAL] => Array
+                        (
+                            [step] => 0.5
+                            [multiselect_sep] => ,
+                            [dirmask] => 755
+                            [filemask] => 644
+                        )
+
+                )
+
+            [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+            [_specialchars:protected] => Array
+                (
+                    ["] => :DQUOTE:
+                    ['] => :SQUOTE:
+                    [\t] => TAB
+                )
+
+        )
+
+    [_initialized:protected] => 1
+    [_exceptions:protected] => Array
+        (
+            [SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist] => Array
+                (
+                    [0] => 1
+                    [1] => 1
+                )
+
+        )
+
+    [tprefix] => mg_
+    [_connected:protected] => 
+    [_activeplugins:protected] => Array
+        (
+            [datasources] => Array
+                (
+                    [0] => Magmi_CSVDataSource Object
+                        (
+                            [_csvreader:protected] => Magmi_CSVReader Object
+                                (
+                                    [_filename:protected] => /home/celebr28/public_html/var/import/downloadable.csv
+                                    [_fh:protected] => Resource id #299
+                                    [_cols:protected] => Array
+                                        (
+                                            [0] => sku
+                                            [1] => attribute_set
+                                            [2] => product_type_id
+                                            [3] => type
+                                            [4] => category_ids
+                                            [5] => name
+                                            [6] => media_gallery
+                                            [7] => image
+                                            [8] => small_image
+                                            [9] => thumbnail
+                                            [10] => material
+                                            [11] => qty
+                                            [12] => special_price
+                                            [13] => price
+                                            [14] => description
+                                            [15] => short_description
+                                            [16] => tax_class_id
+                                            [17] => visibility
+                                            [18] => is_in_stock
+                                            [19] => template
+                                            [20] => customization
+                                            [21] => links
+                                        )
+
+                                    [_csep:protected] => ,
+                                    [_dcsep:protected] => ,
+                                    [_params:protected] => 
+                                    [_buffersize:protected] => 0
+                                    [_curline:protected] => 1
+                                    [_nhcols:protected] => 22
+                                    [_ignored:protected] => Array
+                                        (
+                                            [0] => 
+                                        )
+
+                                    [_callers:protected] => Array
+                                        (
+                                            [0] => Magmi_CSVDataSource Object
+ *RECURSION*
+                                        )
+
+                                    [_cenc] => "
+                                )
+
+                            [_class:protected] => Magmi_CSVDataSource
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => Magmi_CSVDataSource
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/Magmi_CSVDataSource.conf
+                                    [_props:protected] => Array
+                                        (
+                                            [Magmi_CSVDataSource] => Array
+                                                (
+                                                    [CSV:importmode] => local
+                                                    [CSV:basedir] => var/import
+                                                    [CSV:filename] => /home/celebr28/public_html/var/import/downloadable.csv
+                                                    [CSV:remoteurl] => 
+                                                    [CSV:remotecookie] => 
+                                                    [CSV:remoteuser] => 
+                                                    [CSV:remotepass] => 
+                                                    [CSV:separator] => ,
+                                                    [CSV:enclosure] => "
+                                                    [CSV:headerline] => Array
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/Magmi_CSVDataSource.conf
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => Magmi_CSVDataSource
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/base/datasources/csv
+                                    [file] => magmi_csvdatasource.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [CSV:importmode] => local
+                                    [CSV:basedir] => var/import
+                                    [CSV:filename] => /home/celebr28/public_html/var/import/downloadable.csv
+                                    [CSV:remoteurl] => 
+                                    [CSV:remotecookie] => 
+                                    [CSV:remoteuser] => 
+                                    [CSV:remotepass] => 
+                                    [CSV:separator] => ,
+                                    [CSV:enclosure] => "
+                                    [CSV:headerline] => Array
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                )
+
+            [general] => Array
+                (
+                    [0] => Magmi_ReindexingPlugin Object
+                        (
+                            [_reindex:protected] => 
+                            [_indexlist:protected] => catalog_product_attribute,catalog_product_price,catalog_product_flat,catalog_category_flat,catalog_category_product,cataloginventory_stock,catalog_url,catalogsearch_fulltext,tag_summary
+                            [_mdh:protected] => LocalMagentoDirHandler Object
+                                (
+                                    [_rfgid:protected] => image
+                                    [_magdir:protected] => /home/celebr28/public_html
+                                    [_lasterror:protected] => Array
+                                        (
+                                        )
+
+                                    [_exec_mode:protected] => popen
+                                )
+
+                            [_class:protected] => Magmi_ReindexingPlugin
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => Magmi_ReindexingPlugin
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/Magmi_ReindexingPlugin.conf
+                                    [_props:protected] => Array
+                                        (
+                                            [Magmi_ReindexingPlugin] => Array
+                                                (
+                                                    [REINDEX:indexes] => catalog_product_attribute,catalog_product_price,catalog_product_flat,catalog_category_flat,catalog_category_product,cataloginventory_stock,catalog_url,catalogsearch_fulltext,tag_summary
+                                                    [REINDEX:phpcli] => php
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/Magmi_ReindexingPlugin.conf
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => Magmi_ReindexingPlugin
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/base/general/reindex
+                                    [file] => magmi_reindexing_plugin.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [REINDEX:indexes] => catalog_product_attribute,catalog_product_price,catalog_product_flat,catalog_category_flat,catalog_category_product,cataloginventory_stock,catalog_url,catalogsearch_fulltext,tag_summary
+                                    [REINDEX:phpcli] => php
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                )
+
+            [itemprocessors] => Array
+                (
+                    [0] => CategoryImporter Object
+                        (
+                            [_idcache:protected] => Array
+                                (
+                                )
+
+                            [_catattr:protected] => Array
+                                (
+                                )
+
+                            [_cattrinfos:protected] => Array
+                                (
+                                    [varchar] => Array
+                                        (
+                                            [name] => Array
+                                                (
+                                                    [attribute_id] => 41
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => name
+                                                    [attribute_model] => 
+                                                    [backend_model] => 
+                                                    [backend_type] => varchar
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => text
+                                                    [frontend_label] => Name
+                                                    [frontend_class] => 
+                                                    [source_model] => 
+                                                    [is_required] => 1
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                            [url_key] => Array
+                                                (
+                                                    [attribute_id] => 43
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => url_key
+                                                    [attribute_model] => 
+                                                    [backend_model] => catalog/category_attribute_backend_urlkey
+                                                    [backend_type] => varchar
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => text
+                                                    [frontend_label] => URL Key
+                                                    [frontend_class] => 
+                                                    [source_model] => 
+                                                    [is_required] => 0
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                            [url_path] => Array
+                                                (
+                                                    [attribute_id] => 57
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => url_path
+                                                    [attribute_model] => 
+                                                    [backend_model] => 
+                                                    [backend_type] => varchar
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => text
+                                                    [frontend_label] => 
+                                                    [frontend_class] => 
+                                                    [source_model] => 
+                                                    [is_required] => 0
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                        )
+
+                                    [int] => Array
+                                        (
+                                            [is_active] => Array
+                                                (
+                                                    [attribute_id] => 42
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => is_active
+                                                    [attribute_model] => 
+                                                    [backend_model] => 
+                                                    [backend_type] => int
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => select
+                                                    [frontend_label] => Is Active
+                                                    [frontend_class] => 
+                                                    [source_model] => eav/entity_attribute_source_boolean
+                                                    [is_required] => 1
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                            [is_anchor] => Array
+                                                (
+                                                    [attribute_id] => 51
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => is_anchor
+                                                    [attribute_model] => 
+                                                    [backend_model] => 
+                                                    [backend_type] => int
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => select
+                                                    [frontend_label] => Is Anchor
+                                                    [frontend_class] => 
+                                                    [source_model] => eav/entity_attribute_source_boolean
+                                                    [is_required] => 0
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                            [include_in_menu] => Array
+                                                (
+                                                    [attribute_id] => 67
+                                                    [entity_type_id] => 3
+                                                    [attribute_code] => include_in_menu
+                                                    [attribute_model] => 
+                                                    [backend_model] => 
+                                                    [backend_type] => int
+                                                    [backend_table] => 
+                                                    [frontend_model] => 
+                                                    [frontend_input] => select
+                                                    [frontend_label] => Include in Navigation Menu
+                                                    [frontend_class] => 
+                                                    [source_model] => eav/entity_attribute_source_boolean
+                                                    [is_required] => 1
+                                                    [is_user_defined] => 0
+                                                    [default_value] => 1
+                                                    [is_unique] => 0
+                                                    [note] => 
+                                                )
+
+                                        )
+
+                                )
+
+                            [_catroots:protected] => Array
+                                (
+                                    [1] => Array
+                                        (
+                                            [path] => 1/4
+                                            [etid] => 3
+                                            [name] => Store Categories
+                                            [rootarr] => Array
+                                                (
+                                                    [0] => 1
+                                                    [1] => 4
+                                                )
+
+                                        )
+
+                                )
+
+                            [_catrootw:protected] => Array
+                                (
+                                    [1] => Array
+                                        (
+                                            [0] => 1
+                                        )
+
+                                )
+
+                            [_cat_eid:protected] => 3
+                            [_tsep:protected] => /
+                            [_escapedtsep:protected] => ---
+                            [_class:protected] => CategoryImporter
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => CategoryImporter
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/CategoryImporter.conf
+                                    [_props:protected] => Array
+                                        (
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [CAT:baseroot] => 
+                                                    [CAT:lastonly] => 0
+                                                    [CAT:urlending] => .html
+                                                    [CAT:treesep] => /
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/CategoryImporter.conf
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => CategoryImporter
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/extra/itemprocessors/categories
+                                    [file] => categoryimport.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [CAT:baseroot] => 
+                                    [CAT:lastonly] => 0
+                                    [CAT:urlending] => .html
+                                    [CAT:treesep] => /
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                    [1] => DownloadableProcessor Object
+                        (
+                            [_filePath:protected] => /home/celebr28/public_html/media/downloadable/files/links/
+                            [_class:protected] => DownloadableProcessor
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => DownloadableProcessor
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/DownloadableProcessor.conf
+                                    [_props:protected] => 
+                                    [inifile] => 
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => DownloadableProcessor
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/extra/itemprocessors/downloadable
+                                    [file] => downloadableprocessor.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                    [2] => ImageAttributeItemProcessor Object
+                        (
+                            [forcename:protected] => 
+                            [magdir:protected] => /home/celebr28/public_html
+                            [imgsourcedirs:protected] => Array
+                                (
+                                )
+
+                            [errattrs:protected] => Array
+                                (
+                                )
+
+                            [_errorimgs:protected] => Array
+                                (
+                                )
+
+                            [_lastimage:protected] => 
+                            [_handled_attributes:protected] => Array
+                                (
+                                )
+
+                            [_img_baseattrs:protected] => Array
+                                (
+                                    [0] => image
+                                    [1] => small_image
+                                    [2] => thumbnail
+                                )
+
+                            [_active:protected] => 1
+                            [_newitem:protected] => 
+                            [_mdh:protected] => LocalMagentoDirHandler Object
+                                (
+                                    [_rfgid:protected] => image
+                                    [_magdir:protected] => /home/celebr28/public_html
+                                    [_lasterror:protected] => Array
+                                        (
+                                        )
+
+                                    [_exec_mode:protected] => popen
+                                )
+
+                            [_remoteroot:protected] => 
+                            [debug:protected] => no
+                            [_class:protected] => ImageAttributeItemProcessor
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => ImageAttributeItemProcessor
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/ImageAttributeItemProcessor.conf
+                                    [_props:protected] => Array
+                                        (
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [IMG:sourcedir] => media/import
+                                                    [IMG:renaming] => 
+                                                    [IMG:writemode] => keep
+                                                    [IMG:existingonly] => no
+                                                    [IMG:debug] => no
+                                                    [IMG:remoteroot] => 
+                                                    [IMG:remoteuser] => 
+                                                    [IMG:remotepass] => 
+                                                    [IMG:predlcheck] => yes
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/ImageAttributeItemProcessor.conf
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => ImageAttributeItemProcessor
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/extra/itemprocessors/imageprocessor
+                                    [file] => imageitattributeemprocessor.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [IMG:sourcedir] => media/import
+                                    [IMG:renaming] => 
+                                    [IMG:writemode] => keep
+                                    [IMG:existingonly] => no
+                                    [IMG:debug] => no
+                                    [IMG:remoteroot] => 
+                                    [IMG:remoteuser] => 
+                                    [IMG:remotepass] => 
+                                    [IMG:predlcheck] => yes
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                    [3] => ItemIndexer Object
+                        (
+                            [_toindex:protected] => 
+                            [tns:protected] => Array
+                                (
+                                    [cpe] => mg_catalog_product_entity
+                                    [cce] => mg_catalog_category_entity
+                                    [ccp] => mg_catalog_category_product
+                                    [cpw] => mg_catalog_product_website
+                                    [cs] => mg_core_store
+                                    [csg] => mg_core_store_group
+                                    [cpev] => mg_catalog_product_entity_varchar
+                                    [cpei] => mg_catalog_product_entity_int
+                                    [ccev] => mg_catalog_category_entity_varchar
+                                    [ea] => mg_eav_attribute
+                                    [ccpi] => mg_catalog_category_product_index
+                                    [curw] => mg_core_url_rewrite
+                                )
+
+                            [visinf:protected] => Array
+                                (
+                                    [attribute_id] => 102
+                                    [entity_type_id] => 4
+                                    [attribute_code] => visibility
+                                    [attribute_model] => 
+                                    [backend_model] => 
+                                    [backend_type] => int
+                                    [backend_table] => 
+                                    [frontend_model] => 
+                                    [frontend_input] => select
+                                    [frontend_label] => Visibility
+                                    [frontend_class] => 
+                                    [source_model] => catalog/product_visibility
+                                    [is_required] => 1
+                                    [is_user_defined] => 0
+                                    [default_value] => 4
+                                    [is_unique] => 0
+                                    [note] => 
+                                    [is_global] => 0
+                                    [apply_to] => 
+                                )
+
+                            [catpaths:protected] => 
+                            [_class:protected] => ItemIndexer
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => ItemIndexer
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/ItemIndexer.conf
+                                    [_props:protected] => Array
+                                        (
+                                            [ItemIndexer] => Array
+                                                (
+                                                    [OTFI:urlending] => .html
+                                                    [OTFI:usecatinurl] => 1
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/ItemIndexer.conf
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => Array
+                                (
+                                    [class] => ItemIndexer
+                                    [dir] => /home/celebr28/public_html/magmi/plugins/extra/itemprocessors/itemindexer
+                                    [file] => otfindexer.php
+                                )
+
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [OTFI:urlending] => .html
+                                    [OTFI:usecatinurl] => 1
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                    [4] => Magmi_DefaultAttributeItemProcessor Object
+                        (
+                            [_basecols:protected] => Array
+                                (
+                                    [store] => admin
+                                    [type] => simple
+                                )
+
+                            [_baseattrs:protected] => Array
+                                (
+                                    [status] => 1
+                                    [visibility] => 4
+                                    [page_layout] => 
+                                    [tax_class_id] => Taxable Goods
+                                )
+
+                            [_forcedefault:protected] => Array
+                                (
+                                    [store] => admin
+                                )
+
+                            [_missingcols:protected] => Array
+                                (
+                                    [0] => store
+                                )
+
+                            [_missingattrs:protected] => Array
+                                (
+                                    [0] => status
+                                    [2] => page_layout
+                                )
+
+                            [_class:protected] => Magmi_DefaultAttributeItemProcessor
+                            [_plugintype:protected] => 
+                            [_plugindir:protected] => 
+                            [_config:protected] => Magmi_PluginConfig Object
+                                (
+                                    [_prefix:protected] => Magmi_DefaultAttributeItemProcessor
+                                    [_conffile:protected] => 
+                                    [_profile:protected] => p3
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/Magmi_DefaultAttributeItemProcessor.conf
+                                    [_props:protected] => 
+                                    [inifile] => 
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_magmiconfig:protected] => Magmi_Config Object
+                                (
+                                    [_defaultconfigname:Magmi_Config:private] => 
+                                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_props:protected] => Array
+                                        (
+                                            [DATABASE] => Array
+                                                (
+                                                    [connectivity] => net
+                                                    [host] => localhost
+                                                    [port] => 3306
+                                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                                    [dbname] => celebr28_mage867
+                                                    [user] => celebr28_mage867
+                                                    [password] => (O8Pn-3S9N
+                                                    [table_prefix] => mg_
+                                                )
+
+                                            [MAGENTO] => Array
+                                                (
+                                                    [version] => 1.7.x
+                                                    [basedir] => /home/celebr28/public_html/
+                                                )
+
+                                            [GLOBAL] => Array
+                                                (
+                                                    [step] => 0.5
+                                                    [multiselect_sep] => ,
+                                                    [dirmask] => 755
+                                                    [filemask] => 644
+                                                )
+
+                                        )
+
+                                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                                    [_specialchars:protected] => Array
+                                        (
+                                            ["] => :DQUOTE:
+                                            ['] => :SQUOTE:
+                                            [\t] => TAB
+                                        )
+
+                                )
+
+                            [_pluginmeta:protected] => 
+                            [_callers:protected] => Array
+                                (
+                                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                                )
+
+                            [_params] => Array
+                                (
+                                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                                    [ts] => 1403860168
+                                    [run] => import
+                                    [logfile] => progress.txt
+                                    [profile] => p3
+                                    [mode] => create
+                                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                                    [epc-initiated] => 1
+                                    [epc-ic] => 53ad31af
+                                    [epc-no-primary-cache] => 1
+                                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                                    [__atuvc] => 15|23,4|24,2|25,4|26
+                                    [lc_window_state] => minimized
+                                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [_pluginclasses:protected] => Array
+        (
+            [datasources] => Array
+                (
+                    [0] => Magmi_CSVDataSource
+                )
+
+            [general] => Array
+                (
+                    [0] => Magmi_ReindexingPlugin
+                )
+
+            [itemprocessors] => Array
+                (
+                    [0] => CategoryImporter
+                    [1] => DownloadableProcessor
+                    [2] => ImageAttributeItemProcessor
+                    [3] => ItemIndexer
+                    [4] => Magmi_DefaultAttributeItemProcessor
+                )
+
+        )
+
+    [_builtinplugins:protected] => Array
+        (
+            [itemprocessors] => /home/celebr28/public_html/magmi/plugins/inc/magmi_defaultattributehandler.php::Magmi_DefaultAttributeItemProcessor
+        )
+
+    [_ploop_callbacks:protected] => Array
+        (
+        )
+
+    [_excid:Magmi_Engine:private] => 1
+    [logger] => FileLogger Object
+        (
+            [_fname:protected] => /home/celebr28/public_html/magmi/state/progress.txt
+        )
+
+    [_timingcats:protected] => Array
+        (
+        )
+
+    [_db:protected] => PDO Object
+        (
+        )
+
+    [_debug:protected] => 1
+    [_laststmt:protected] => PDOStatement Object
+        (
+            [queryString] => select * from downloadable_link where product_id = ?
+        )
+
+    [_use_stmt_cache:protected] => 1
+    [_nreq:protected] => 5
+    [_indbtime:protected] => 0.018799304962158
+    [_intrans:protected] => 1
+    [prepared:protected] => Array
+        (
+            [SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT * FROM mg_eav_attribute WHERE entity_type_id=? AND attribute_code=?
+                        )
+
+                    [1] => 6
+                )
+
+            [SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT entity_type_id FROM mg_eav_entity_type WHERE entity_type_code=?
+                        )
+
+                    [1] => 2
+                )
+
+            [SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?)) AND (entity_type_id=?)] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?)) AND (entity_type_id=?)
+                        )
+
+                    [1] => 1
+                )
+
+            [SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT attribute_set_id FROM mg_eav_attribute_set WHERE attribute_set_name=? AND entity_type_id=?
+                        )
+
+                    [1] => 2
+                )
+
+            [SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)) AND (entity_type_id=?)] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT `mg_eav_attribute`.*,mg_catalog_eav_attribute.is_global,mg_catalog_eav_attribute.apply_to FROM `mg_eav_attribute`
+				LEFT JOIN mg_catalog_eav_attribute ON mg_eav_attribute.attribute_id=mg_catalog_eav_attribute.attribute_id
+				WHERE  (mg_eav_attribute.attribute_code IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)) AND (entity_type_id=?)
+                        )
+
+                    [1] => 1
+                )
+
+            [SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => SELECT sku,entity_id as pid,attribute_set_id  as asid,type_id as type FROM mg_catalog_product_entity WHERE sku=?
+                        )
+
+                    [1] => 1
+                )
+
+            [DESCRIBE mg_catalog_product_entity] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => DESCRIBE mg_catalog_product_entity
+                        )
+
+                    [1] => 1
+                )
+
+            [INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => INSERT INTO `mg_catalog_product_entity` (sku,type_id,attribute_set_id,entity_type_id,created_at,updated_at) VALUES (?,?,?,?,?,?)
+                        )
+
+                    [1] => 1
+                )
+
+            [select * from downloadable_link where product_id = ?] => Array
+                (
+                    [0] => PDOStatement Object
+                        (
+                            [queryString] => select * from downloadable_link where product_id = ?
+                        )
+
+                    [1] => 1
+                )
+
+        )
+
+    [_timecounter:protected] => TimeCounter Object
+        (
+            [_timingcats:protected] => Array
+                (
+                    [db] => Array
+                        (
+                            [_counters] => Array
+                                (
+                                    [requests] => 18
+                                )
+
+                            [_timers] => Array
+                                (
+                                    [beforeImport] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3006
+                                                    [dur] => 3.7193298339844E-5
+                                                    [start] => 1403860181.3008
+                                                    [end] => 1403860181.3008
+                                                )
+
+                                            [Magmi_CSVDataSource] => Array
+                                                (
+                                                    [init] => 1403860181.3006
+                                                    [dur] => 0.00010299682617188
+                                                    [start] => 1403860181.3006
+                                                    [end] => 1403860181.3007
+                                                )
+
+                                            [Magmi_ReindexingPlugin] => Array
+                                                (
+                                                    [init] => 1403860181.3008
+                                                    [dur] => 2.0980834960938E-5
+                                                    [start] => 1403860181.3008
+                                                    [end] => 1403860181.3008
+                                                )
+
+                                        )
+
+                                    [startImport] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3016
+                                                    [dur] => 0.00013113021850586
+                                                    [start] => 1403860181.3017
+                                                    [end] => 1403860181.3018
+                                                )
+
+                                            [Magmi_CSVDataSource] => Array
+                                                (
+                                                    [init] => 1403860181.3017
+                                                    [dur] => 9.3936920166016E-5
+                                                    [start] => 1403860181.3017
+                                                    [end] => 1403860181.3018
+                                                )
+
+                                        )
+
+                                    [processColumnList] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 0.00011992454528809
+                                                    [start] => 1403860181.3021
+                                                    [end] => 1403860181.3022
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 3.6001205444336E-5
+                                                    [start] => 1403860181.302
+                                                    [end] => 1403860181.302
+                                                )
+
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 4.6968460083008E-5
+                                                    [start] => 1403860181.302
+                                                    [end] => 1403860181.3021
+                                                )
+
+                                            [Magmi_DefaultAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3021
+                                                    [dur] => 9.4890594482422E-5
+                                                    [start] => 1403860181.3021
+                                                    [end] => 1403860181.3022
+                                                )
+
+                                        )
+
+                                    [processItemBeforeId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3032
+                                                    [dur] => 4.0054321289062E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.0980834960938E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [ItemIndexer] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.3841857910156E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [Magmi_DefaultAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.2172927856445E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                        )
+
+                                    [processItemAfterId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 2.598762512207E-5
+                                                    [start] => 1403860181.3229
+                                                    [end] => 1403860181.3229
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                        )
+
+                                    [indb] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3231
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3231
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3231
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3231
+                                                )
+
+                                        )
+
+                                    [processItemException] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 4.3153762817383E-5
+                                                    [start] => 1403860181.3234
+                                                    [end] => 1403860181.3235
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3234
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [global] => Array
+                        (
+                            [_counters] => Array
+                                (
+                                    [requests] => 18
+                                )
+
+                            [_timers] => Array
+                                (
+                                    [beforeImport] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3006
+                                                    [dur] => 3.7193298339844E-5
+                                                    [start] => 1403860181.3008
+                                                    [end] => 1403860181.3008
+                                                )
+
+                                            [Magmi_CSVDataSource] => Array
+                                                (
+                                                    [init] => 1403860181.3006
+                                                    [dur] => 0.00010299682617188
+                                                    [start] => 1403860181.3006
+                                                    [end] => 1403860181.3007
+                                                )
+
+                                            [Magmi_ReindexingPlugin] => Array
+                                                (
+                                                    [init] => 1403860181.3008
+                                                    [dur] => 2.0980834960938E-5
+                                                    [start] => 1403860181.3008
+                                                    [end] => 1403860181.3008
+                                                )
+
+                                        )
+
+                                    [startImport] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3016
+                                                    [dur] => 0.00013113021850586
+                                                    [start] => 1403860181.3017
+                                                    [end] => 1403860181.3018
+                                                )
+
+                                            [Magmi_CSVDataSource] => Array
+                                                (
+                                                    [init] => 1403860181.3017
+                                                    [dur] => 9.3936920166016E-5
+                                                    [start] => 1403860181.3017
+                                                    [end] => 1403860181.3018
+                                                )
+
+                                        )
+
+                                    [processColumnList] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 0.00011992454528809
+                                                    [start] => 1403860181.3021
+                                                    [end] => 1403860181.3022
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 3.6001205444336E-5
+                                                    [start] => 1403860181.302
+                                                    [end] => 1403860181.302
+                                                )
+
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.302
+                                                    [dur] => 4.6968460083008E-5
+                                                    [start] => 1403860181.302
+                                                    [end] => 1403860181.3021
+                                                )
+
+                                            [Magmi_DefaultAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3021
+                                                    [dur] => 9.4890594482422E-5
+                                                    [start] => 1403860181.3021
+                                                    [end] => 1403860181.3022
+                                                )
+
+                                        )
+
+                                    [processItemBeforeId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3032
+                                                    [dur] => 4.0054321289062E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.0980834960938E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [ItemIndexer] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.3841857910156E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [Magmi_DefaultAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.2172927856445E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                        )
+
+                                    [processItemAfterId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 2.598762512207E-5
+                                                    [start] => 1403860181.3229
+                                                    [end] => 1403860181.3229
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                        )
+
+                                    [processItemException] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 4.3153762817383E-5
+                                                    [start] => 1403860181.3234
+                                                    [end] => 1403860181.3235
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3234
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [line] => Array
+                        (
+                            [_counters] => Array
+                                (
+                                    [requests] => 5
+                                )
+
+                            [_timers] => Array
+                                (
+                                    [processItemBeforeId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3032
+                                                    [dur] => 4.0054321289062E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3033
+                                                    [dur] => 2.288818359375E-5
+                                                    [start] => 1403860181.3033
+                                                    [end] => 1403860181.3033
+                                                )
+
+                                            [ImageAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.0980834960938E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [ItemIndexer] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.3841857910156E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3034
+                                                )
+
+                                            [Magmi_DefaultAttributeItemProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3034
+                                                    [dur] => 2.2172927856445E-5
+                                                    [start] => 1403860181.3034
+                                                    [end] => 1403860181.3035
+                                                )
+
+                                        )
+
+                                    [processItemAfterId] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                            [CategoryImporter] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 2.598762512207E-5
+                                                    [start] => 1403860181.3229
+                                                    [end] => 1403860181.3229
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3229
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3229
+                                                )
+
+                                        )
+
+                                    [processItemException] => Array
+                                        (
+                                            [Magmi_ProductImportEngine] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 4.3153762817383E-5
+                                                    [start] => 1403860181.3234
+                                                    [end] => 1403860181.3235
+                                                )
+
+                                            [DownloadableProcessor] => Array
+                                                (
+                                                    [init] => 1403860181.3234
+                                                    [dur] => 0
+                                                    [start] => 1403860181.3234
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [_defaultsrc:protected] => Magmi_ProductImportEngine
+            [_timingcontext:protected] => Array
+                (
+                    [1] => DownloadableProcessor
+                )
+
+        )
+
+    [_tcats:protected] => db
+    [_debugfile] => debugone.txt
+    [datasource] => Magmi_CSVDataSource Object
+        (
+            [_csvreader:protected] => Magmi_CSVReader Object
+                (
+                    [_filename:protected] => /home/celebr28/public_html/var/import/downloadable.csv
+                    [_fh:protected] => Resource id #299
+                    [_cols:protected] => Array
+                        (
+                            [0] => sku
+                            [1] => attribute_set
+                            [2] => product_type_id
+                            [3] => type
+                            [4] => category_ids
+                            [5] => name
+                            [6] => media_gallery
+                            [7] => image
+                            [8] => small_image
+                            [9] => thumbnail
+                            [10] => material
+                            [11] => qty
+                            [12] => special_price
+                            [13] => price
+                            [14] => description
+                            [15] => short_description
+                            [16] => tax_class_id
+                            [17] => visibility
+                            [18] => is_in_stock
+                            [19] => template
+                            [20] => customization
+                            [21] => links
+                        )
+
+                    [_csep:protected] => ,
+                    [_dcsep:protected] => ,
+                    [_params:protected] => 
+                    [_buffersize:protected] => 0
+                    [_curline:protected] => 1
+                    [_nhcols:protected] => 22
+                    [_ignored:protected] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [_callers:protected] => Array
+                        (
+                            [0] => Magmi_CSVDataSource Object
+ *RECURSION*
+                        )
+
+                    [_cenc] => "
+                )
+
+            [_class:protected] => Magmi_CSVDataSource
+            [_plugintype:protected] => 
+            [_plugindir:protected] => 
+            [_config:protected] => Magmi_PluginConfig Object
+                (
+                    [_prefix:protected] => Magmi_CSVDataSource
+                    [_conffile:protected] => 
+                    [_profile:protected] => p3
+                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf/p3
+                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/p3/Magmi_CSVDataSource.conf
+                    [_props:protected] => Array
+                        (
+                            [Magmi_CSVDataSource] => Array
+                                (
+                                    [CSV:importmode] => local
+                                    [CSV:basedir] => var/import
+                                    [CSV:filename] => /home/celebr28/public_html/var/import/downloadable.csv
+                                    [CSV:remoteurl] => 
+                                    [CSV:remotecookie] => 
+                                    [CSV:remoteuser] => 
+                                    [CSV:remotepass] => 
+                                    [CSV:separator] => ,
+                                    [CSV:enclosure] => "
+                                    [CSV:headerline] => Array
+                                )
+
+                        )
+
+                    [inifile] => /home/celebr28/public_html/magmi/conf/p3/Magmi_CSVDataSource.conf
+                    [_specialchars:protected] => Array
+                        (
+                            ["] => :DQUOTE:
+                            ['] => :SQUOTE:
+                            [\t] => TAB
+                        )
+
+                )
+
+            [_magmiconfig:protected] => Magmi_Config Object
+                (
+                    [_defaultconfigname:Magmi_Config:private] => 
+                    [_basedir:protected] => /home/celebr28/public_html/magmi/conf
+                    [_confname:protected] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                    [_props:protected] => Array
+                        (
+                            [DATABASE] => Array
+                                (
+                                    [connectivity] => net
+                                    [host] => localhost
+                                    [port] => 3306
+                                    [unix_socket] => /var/lib/mysql/mysql.sock
+                                    [dbname] => celebr28_mage867
+                                    [user] => celebr28_mage867
+                                    [password] => (O8Pn-3S9N
+                                    [table_prefix] => mg_
+                                )
+
+                            [MAGENTO] => Array
+                                (
+                                    [version] => 1.7.x
+                                    [basedir] => /home/celebr28/public_html/
+                                )
+
+                            [GLOBAL] => Array
+                                (
+                                    [step] => 0.5
+                                    [multiselect_sep] => ,
+                                    [dirmask] => 755
+                                    [filemask] => 644
+                                )
+
+                        )
+
+                    [inifile] => /home/celebr28/public_html/magmi/conf/magmi.ini
+                    [_specialchars:protected] => Array
+                        (
+                            ["] => :DQUOTE:
+                            ['] => :SQUOTE:
+                            [\t] => TAB
+                        )
+
+                )
+
+            [_pluginmeta:protected] => Array
+                (
+                    [class] => Magmi_CSVDataSource
+                    [dir] => /home/celebr28/public_html/magmi/plugins/base/datasources/csv
+                    [file] => magmi_csvdatasource.php
+                )
+
+            [_callers:protected] => Array
+                (
+                    [0] => Magmi_ProductImportEngine Object
+ *RECURSION*
+                )
+
+            [_params] => Array
+                (
+                    [CSV:importmode] => local
+                    [CSV:basedir] => var/import
+                    [CSV:filename] => /home/celebr28/public_html/var/import/downloadable.csv
+                    [CSV:remoteurl] => 
+                    [CSV:remotecookie] => 
+                    [CSV:remoteuser] => 
+                    [CSV:remotepass] => 
+                    [CSV:separator] => ,
+                    [CSV:enclosure] => "
+                    [CSV:headerline] => Array
+                    [engine] => magmi_productimportengine:Magmi_ProductImportEngine
+                    [ts] => 1403860168
+                    [run] => import
+                    [logfile] => progress.txt
+                    [profile] => p3
+                    [mode] => create
+                    [frontend] => f57f37d63b98f462e5b7144291dac04b
+                    [adminhtml] => otk3lqadc8mh7tnbbbo6lu8p22
+                    [epc-initiated] => 1
+                    [epc-ic] => 53ad31af
+                    [epc-no-primary-cache] => 1
+                    [__lc_visitor_id_1699811] => S1402046056.1cda2c355a
+                    [__atuvc] => 15|23,4|24,2|25,4|26
+                    [lc_window_state] => minimized
+                    [PHPSESSID] => 1jutg5ajbe32gusdijnkigems2
+                )
+
+        )
+
+    [_optidcache:Magmi_ProductImportEngine:private] => Array
+        (
+        )
+
+)
+
++++++++++++++++++++++++++++++
+END CONTEXT DUMP
++++++++++++++++++++++++++++++
+---- ENDTRACE : 1 -----
+---- TRACE : 2 -----
+---- DATE : 2014-06-27 04:09:41 ------
+Duplicated exception - same trace as TRACE : 1
+---- ENDTRACE : 2 -----
+---- TRACE : 3 -----
+---- DATE : 2014-06-27 04:09:41 ------
+Duplicated exception - same trace as TRACE : 1
+---- ENDTRACE : 3 -----
+---- TRACE : 4 -----
+---- DATE : 2014-06-27 04:09:41 ------
+Duplicated exception - same trace as TRACE : 1
+---- ENDTRACE : 4 -----
+---- TRACE : 5 -----
+---- DATE : 2014-06-27 04:09:41 ------
+Duplicated exception - same trace as TRACE : 1
+---- ENDTRACE : 5 -----
+---- TRACE : 6 -----
+---- DATE : 2014-06-27 04:09:41 ------
+Duplicated exception - same trace as TRACE : 1
+---- ENDTRACE : 6 -----

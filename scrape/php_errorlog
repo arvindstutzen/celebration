@@ -1,0 +1,29 @@
+[28-Jan-2014 02:11:53 CST6CDT] PHP Fatal error:  Uncaught exception 'Zend_Feed_Exception' with message 'DOMDocument cannot parse XML: Premature end of data in tag html line 1
+' in /home/celebr28/public_html/lib/Zend/Feed/Reader.php:340
+Stack trace:
+#0 /home/celebr28/public_html/lib/Zend/Feed/Reader.php(289): Zend_Feed_Reader::importString('<!DOCTYPE html ...')
+#1 /home/celebr28/public_html/scrape/Temp.php(10): Zend_Feed_Reader::import('http://www.cele...')
+#2 {main}
+  thrown in /home/celebr28/public_html/lib/Zend/Feed/Reader.php on line 340
+[28-Jan-2014 02:12:13 CST6CDT] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE in /home/celebr28/public_html/lib/Zend/Feed/Reader.php on line 53
+[28-Jan-2014 02:12:20 CST6CDT] PHP Fatal error:  Uncaught exception 'Zend_Feed_Exception' with message 'DOMDocument cannot parse XML: Premature end of data in tag html line 1
+' in /home/celebr28/public_html/lib/Zend/Feed/Reader.php:340
+Stack trace:
+#0 /home/celebr28/public_html/lib/Zend/Feed/Reader.php(289): Zend_Feed_Reader::importString('<!DOCTYPE html ...')
+#1 /home/celebr28/public_html/scrape/Temp.php(10): Zend_Feed_Reader::import('http://www.cele...')
+#2 {main}
+  thrown in /home/celebr28/public_html/lib/Zend/Feed/Reader.php on line 340
+[28-Jan-2014 02:22:23 CST6CDT] PHP Fatal error:  Uncaught exception 'Zend_Feed_Exception' with message 'DOMDocument cannot parse XML: Premature end of data in tag html line 1
+' in /home/celebr28/public_html/lib/Zend/Feed/Reader.php:344
+Stack trace:
+#0 /home/celebr28/public_html/lib/Zend/Feed/Reader.php(293): Zend_Feed_Reader::importString('<!DOCTYPE html ...')
+#1 /home/celebr28/public_html/scrape/Temp.php(8): Zend_Feed_Reader::import('http://www.cele...')
+#2 {main}
+  thrown in /home/celebr28/public_html/lib/Zend/Feed/Reader.php on line 344
+[13-Feb-2014 07:04:56 CST6CDT] PHP Fatal error:  Uncaught exception 'Zend_Feed_Exception' with message 'DOMDocument cannot parse XML: Premature end of data in tag html line 1
+' in /home/celebr28/public_html/lib/Zend/Feed/Reader.php:343
+Stack trace:
+#0 /home/celebr28/public_html/lib/Zend/Feed/Reader.php(293): Zend_Feed_Reader::importString('<!DOCTYPE html ...')
+#1 /home/celebr28/public_html/scrape/Temp.php(8): Zend_Feed_Reader::import('http://www.cele...')
+#2 {main}
+  thrown in /home/celebr28/public_html/lib/Zend/Feed/Reader.php on line 343

@@ -1,0 +1,44 @@
+title:MAGMI by dweeves - version:0.7.19
+startup:Running Magmi Product Import Engine v1.8.2 by dweeves
+startup:Import Profile:p3
+startup:Import Mode:create
+step:step:0.5%
+plugin;Magmi_CSVDataSource;pluginhello:CSV Datasource-1.3.1-Dweeves- 
+plugin;Magmi_ReindexingPlugin;pluginhello:Magmi Magento Reindexer-1.0.3a-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Magmi_Magento_Reindexer 
+plugin;Magmi_ReindexingPlugin;startup:Magmi Magento Reindexer v1.0.3a - Using execution mode :popen
+plugin;CategoryImporter;pluginhello:On the fly category creator/importer-0.2.4-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_category_creator/importer 
+plugin;DownloadableProcessor;pluginhello:Downloadable products importer-1.0.0.1-Tangkoko SARL-http://store.tangkoko.com/fr/extensions-magento/magmi-downloadable-products-importer-plugin.html 
+plugin;ImageAttributeItemProcessor;pluginhello:Image attributes processor-1.0.29-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=Image_attributes_processor 
+plugin;ItemIndexer;pluginhello:On the fly indexer-0.1.6-Dweeves-http://sourceforge.net/apps/mediawiki/magmi/index.php?title=On_the_fly_indexer 
+plugin;Magmi_DefaultAttributeItemProcessor;pluginhello:Standard Attribute Import-1.0.6-Dweeves- 
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3.1 - Importing CSV : /home/celebr28/public_html/var/import/downloadable.csv using separator [ , ] enclosing [ " ]
+startup:Performing Datasouce Lookup...
+lookup:3:0.00035214424133301
+startup:Found 3 records, took 0.00035214424133301 sec
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3.1 - No BOM detected, assuming File is UTF8 without BOM...
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3.1 - 22 CSV headers columns found
+columns:22
+plugin;Magmi_DefaultAttributeItemProcessor;startup:Standard Attribute Import v1.0.6 - Newly created items will have default values for columns:store,status,page_layout
+startup:Ajusted processed columns:25
+itime:1 - 0.0001380443572998 - 0.0001380443572998
+dbtime:0 - 0 - 0 - 0
+plugin;DownloadableProcessor;debug:Downloadable products importer v1.0.0.1 - file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+error:1:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - 
+error:2:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - ERROR ON RECORD #1
+itime:2 - 0.023559093475342 - 0.023367166519165
+dbtime:5 - 0.018799304962158 - 0.018799304962158 - 5
+plugin;DownloadableProcessor;debug:Downloadable products importer v1.0.0.1 - file:/home/celebr28/public_html/var/import/files/7102-DD.zip,sort_order:,title:7102-DD,sample:,is_shareable:config,number_of_downloads:0
+error:3:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - 
+error:4:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - ERROR ON RECORD #2
+itime:3 - 0.032571077346802 - 0.0089571475982666
+dbtime:8 - 0.025459289550781 - 0.006659984588623 - 3
+plugin;DownloadableProcessor;debug:Downloadable products importer v1.0.0.1 - file:/home/celebr28/public_html/var/import/files/7102-CC.zip,sort_order:,title:7102-CC,sample:,is_shareable:config,number_of_downloads:0
+error:5:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - 
+error:6:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'celebr28_mage867.downloadable_link' doesn't exist - ERROR ON RECORD #3
+itime:3 - 0.050890922546387 - 0.018263816833496
+dbtime:12 - 0.041576385498047 - 0.016117095947266 - 4
+info:Skus imported OK:0/3
+warning:Skus imported KO:3/3
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - Cleaning flat tables before reindex...
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - running indexer
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - Reindexing catalog_product_attribute....

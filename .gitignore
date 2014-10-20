@@ -1,0 +1,15 @@
+*.dll
+*.zip
+*.gz
+/var/
+/media/
+/app/code/core/
+/downloader/
+/lib/Zend/
+/lib/Magento/
+/lib/Mage/
+*.bak
+.htaccess.bak
+.idea/
+.DS_Store
+*.sql

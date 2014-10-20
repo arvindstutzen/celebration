@@ -1,0 +1,37 @@
+<?php //0015d
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * Below are methods found in this class
+ *
+ * @method mixed public isAdminMenuHighlightingEnabled()
+ * @method mixed public isDemo()
+ * @method mixed public isNotDemo()
+ *
+ */
+?>
+HR+cPnbE898ThfYblFIriVxbuCNM4U39s+6KVeBSutA1MxMoPCDemX136bDWC1hsyR5IjYNWOAE2
+sK6J1NmrJsWS8PyizepJ5HHs2ZXU/IhuYRSmX1gZb/ltYu9LJJq1lA8vQoGeZ1nAMEE5gSY7uHCT
+ss23S0OCCWJybrIc2x280pqsGGSD9LOqjiFONQlQ/HDsOguCw4Y0a3h5YfLvP9pRkq4ugWTDXJNs
+j8b26pP22CVZU1kaashpkzHqJ8k9L1Q9R6G+7RySki29yrdL6Ykp67Ik/Ck9BUO/qhiYRl2q/p9N
+BvjWwB/rMJxOgANM7V6Sz4mus10Z45Hu1uDGXHVn8ejLn3EHJhOS/rxZawGTBoxIF/Gu8Dw84xeJ
+8ISj5GJt88AtAeAsow+8/BQCEL0xphXAJMTfs0Z+CBlT1KluEghx2aVh6db8dJObmBM+yf9GFquN
+6+PXqsS7nOyNQxuvziK2GBoORz8VK8FU2VNoBxzT4ZFs0VRa/hgg3DpkIEU+VbeVBIy6XkPyR3Qt
+xjjxwq5bvyoOFT24n8JFyXbOHNWEKdzl1sZeLpU/nSPC7odsnNx9JKwpJWv6XTwRmCzvMcNORFe2
+AIcHGEVKXea4MIQlYIv/ylJYoUAKoTEjVMxorVJL/pzmax2bnL1dzqhTbAj2WzvwTt+PAg+nT0un
+O23NcDW2RFQcbnN/DMn2AH0NGJBLr3RZdgEXKfZiZC0ax5+mQdJ1tZhKDRY7LlWC/lyRNvKGCFbx
+4MSBOshnUTevMad1ScJf1uX2Z+9Irc1pYzk7L/AD2uHfzcl1RHcu/v96lznKvmfoqPq1NAvqZSlB
+pJEm1VLjagAoyo4PxKDLhDCAKIwaMh6c5N4Wo5ItAUUaH4PKgM9bX0iFQA7KceFnHvEdU1xHbEwY
+8URJznjs98wXOCdKtTlSXkzSVkvRXBW6yDgbb66E+IB43Hy0BTPNwINBVWSkjVCv9AsTtoJoM7Pa
+w3496a2wm1tAxPyfJ6cuMxg2W/0A7ql1pD0EuGikIGcuGSKYtuMe1hcXdQQru8/snBUE+Jq3OVn5
+3UpI/iZK5WwDeDh8vUHEk4kYI06uwO+qfWWOo6u/NwAf8/zHLAoOb3dHv8sMmxMW/qjDHDo+GijT
+TpABsvdulq2s9w5tSvo6Iq6RhIBKQLPtKlcN0Qelb++M88uN39mIpANucTi7uZ9/N/kNAhR+Plfn
+1VEKX2XJy0ZZD9br8gN07hA/jmWNXrhjouI+QfjBoY7dV0OjynCNFJebKknOKOA3iLfhaEHz0eQp
+34NRBBLZgb7EWwrqpORvrKxzjOKsxtLpELzFeQ1jq5egkj/ZFW5nNnzg6p0do7IaeMMHNPsVmpUM
+xgvBgkdLIT3vplANvXqGuasnkQwhO/4vuRh/rHDiD1AkHBkcfd0/+3HkuVrXgL+6rDE54kFITBoM
+qKnYd7xmLu90fScVUBXf8z7Rj9PRLOBrMtcaIXtdlQIM9IN3ivNWIFjL8zHyPb81EXzcineTNeLV
+eo+epVYj6k4FcgnVB6JGPGoEXQnVQWk5BHOgTeShJGdu0JAy04YKbNqWs7TCn7cHYn1dLpdU50+p
+f3qxS/m0CGmTSzgxK/q7/4lnP+VsiszxJwBKUQL66V9TFgdHd+8K/WojasnnPsZVi2t6Pef1UBjX
+++5R/6sY/Tqa5uM1ZQwk0mAa+G==
