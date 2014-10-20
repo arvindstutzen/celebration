@@ -11,5 +11,5 @@
 *.bak
 .htaccess.bak
 .idea/
-.DS_Store
+*.DS_Store
 *.sql
