@@ -7228,3 +7228,18 @@ a.inline{
 .custom h4{
     padding-left:4px;
 }
+
+
+.custom-footer-block{
+    width: 100%;
+}
+
+ .custom-footer-block ul{
+     width: 100%;
+ }
+
+ .custom-footer-block ul li{
+     width: 24%;
+     display: inline-block;
+     margin-left: 1%;
+ }
