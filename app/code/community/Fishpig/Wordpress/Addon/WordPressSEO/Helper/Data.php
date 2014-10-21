@@ -14,7 +14,7 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	 *
 	 * @var array
 	 */
-	protected $_optionFields = array('', 'titles', 'xml', 'social', 'rss', 'internallinks');
+	protected $_optionFields = array('', 'titles', 'xml', 'social', 'rss', 'internallinks', 'permalinks');
 	
 	/**
 	 * The value used to separate token's in the title
@@ -128,7 +128,7 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 			}
 		}
 
-		$this->_updateBreadcrumb('blog', $this->getBreadcrumbsHome());
+#		$this->_updateBreadcrumb('blog', $this->getBreadcrumbsHome());
 
 		/**
 		 * Open Graph Tags
@@ -165,9 +165,9 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordPressIndexIndex($object = null)
 	{
 		$this->_applyMeta(array(
-			'title' => $this->_getTitleFormat('home'),
-			'description' => trim($this->getMetadescHome()),
-			'keywords' => trim($this->getMetakeyHome()),
+			'title' => $this->getTitleHomeWpseo(),
+			'description' => trim($this->getMetadescHomeWpseo()),
+			'keywords' => trim($this->getMetakeyHomeWpseo()),
 		));
 
 		$this->_applyOpenGraph(array(
@@ -188,6 +188,29 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	{
 		$this->_applyPostPageLogic($post);
 
+		if ($post->getPostType() !== 'post' && Mage::helper('wordpress')->isAddonInstalled('CPT')) {
+			$postType = Mage::helper('wp_addon_cpt')->getPostType($post->getPostType());
+			
+			if ($postType !== false) {
+				$crumbs = $this->getAction()->getCrumbs();
+				
+				$keysToKeep = array('home');
+				
+				if (!(Mage::helper('wordpress')->isAddonInstalled('Root') && Mage::getStoreConfig('wordpress/integration/at_root'))) {
+					$keysToKeep[] = 'blog';
+				}
+
+				foreach($crumbs as $key => $crumb) {
+					if (!in_array($key, $keysToKeep)) {
+						$this->getAction()->removeCrumb($key);
+					}
+				}
+
+				$this->getAction()->addCrumb('post_type', array('label' => $postType->getName(), 'link' => $postType->getUrl()));
+				$this->getAction()->addCrumb('post', array('label' => $post->getPostTitle()));
+			}
+		}
+		
 		return $this;
 	}
 	
@@ -200,6 +223,10 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordPressPageView($page)	
 	{
 		$this->_applyPostPageLogic($page, 'page');
+				
+		if ((Mage::helper('wordpress')->isAddonInstalled('Root') && Mage::getStoreConfig('wordpress/integration/at_root'))) {
+			$this->getAction()->removeCrumb('blog');
+		}
 
 		return $this;
 	}
@@ -281,12 +308,13 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 		
 		if ($this->getTwitter()) {
 			$this->_addTwitterCard(array(
-				'card' => 'summary',
-				'site' => ($this->getData('twitter_site') ? '@' . $this->getData('twitter_site') : ''),
+				'card' => $this->getTwitterCardType(),
+				'site' => ($this->getTwitterSite() ? '@' . $this->getTwitterSite() : ''),
 				'title' => $object->getPostTitle(),
 				'creator' => ($creator = $object->getAuthor()->getMetaValue('twitter')) ? '@' . $creator : '',
 			));
 		}
+		
 		return $this;
 	}
 
@@ -298,10 +326,10 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordpressPostCategoryView($category)
 	{
 		$this->_applyMeta(array(
-			'title' => $this->_getTitleFormat('category'),
-			'description' => $this->getMetadescCategory(),
-			'keywords' => $this->getMetakeyCategory(),
-			'robots' => $this->getNoindexCategory() ? 'noindex,follow' : '',
+			'title' => $this->getTitleTaxCategory(),
+			'description' => $this->getMetadescTaxCategory(),
+			'keywords' => $this->getMetakeyTaxCategory(),
+			'robots' => $this->getNoindexTaxCategory() ? 'noindex,follow' : '',
 		));
 		
 		$this->_applyOpenGraph(array(
@@ -348,17 +376,17 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 		}
 		
 		$meta = new Varien_Object(array(
-			'title' => $this->_getTitleFormat('archive'),
-			'description' => $this->getMetadescArchive(),
-			'keywords' => $this->getMetakeyArchive(),
-			'robots' => $this->getNoindexArchive() ? 'noindex,follow' : '',
+			'title' => $this->getTitleArchiveWpseo(),
+			'description' => $this->getMetadescArchiveWpseo(),
+			'keywords' => $this->getMetakeyArchiveWpseo(),
+			'robots' => $this->getNoindexArchiveWpseo() ? 'noindex,follow' : '',
 		));
 
 		$this->_applyMeta($meta->getData());
 		
 		$this->_applyOpenGraph(array(
 			'type' => 'object',
-			'title' => $this->_rewriteString($this->_getTitleFormat('archive')),
+			'title' => $this->_rewriteString($this->getTitleArchiveWpseo()),
 			'url' => $archive->getUrl(),
 		));
 		
@@ -379,17 +407,17 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 		}
 		
 		$meta = new Varien_Object(array(
-			'title' => $this->_getTitleFormat('author'),
-			'description' => $this->getMetadescAuthor(),
-			'keywords' => $this->getMetakeyAuthor(),
-			'robots' => $this->getNoindexAuthor() ? 'noindex,follow' : '',
+			'title' => $this->getTitleAuthorWpseo(),
+			'description' => $this->getMetadescAuthorWpseo(),
+			'keywords' => $this->getMetakeyAuthorWpseo(),
+			'robots' => $this->getNoindexAuthorWpseo() ? 'noindex,follow' : '',
 		));
 
 		$this->_applyMeta($meta->getData());
 		
 		$this->_applyOpenGraph(array(
 			'type' => 'object',
-			'title' => $this->_rewriteString($this->_getTitleFormat('author')),
+			'title' => $this->_rewriteString($this->getTitleAuthorWpseo()),
 			'url' => $author->getUrl(),
 		));
 			
@@ -404,10 +432,10 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordpressPostTagView($tag)
 	{
 		$meta = new Varien_Object(array(
-			'title' => $this->_getTitleFormat('post_tag'),
-			'description' => $this->getMetadescPostTag(),
-			'keywords' => $this->getMetakeyPostTag(),
-			'robots' => $this->getNoindexPostTag() ? 'noindex,follow' : '',
+			'title' => $this->getTitleTaxPostTag(),
+			'description' => $this->getMetadescTaxPostTag(),
+			'keywords' => $this->getMetakeyTaxPostTag(),
+			'robots' => $this->getNoindexTaxPostTag() ? 'noindex,follow' : '',
 		));
 
 		$this->_applyMeta($meta->getData());
@@ -429,14 +457,14 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordpressSearchIndex($object = null)
 	{
 		$meta = new Varien_Object(array(
-			'title' => $this->_getTitleFormat('search'),
+			'title' => $this->getTitleSearchWpseo(),
 		));
 
 		$this->_applyMeta($meta->getData());
 
 		$this->_applyOpenGraph(array(
 			'type' => 'object',
-			'title' => $this->_rewriteString($this->_getTitleFormat('search')),
+			'title' => $this->_rewriteString($this->getTitleSearchWpseo()),
 			'url' => Mage::getUrl('*/*/*', array('_current' => true, '_use_rewrite' => true)),
 		));
 		
@@ -453,8 +481,15 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWpAddonCptIndexView($object)
 	{
 		$this->_applyMeta(array(
-			'title' => $object->getName() . ' | ' . Mage::helper('wordpress')->getWpOption('blogname'),
+			'title' => $this->_getTitleFormat('ptarchive_' .$object->getType()),
+			'description' => trim($this->getData('metadesc-ptarchive-' . $object->getType())),
 		));
+		
+		if (Mage::helper('wordpress')->isAddonInstalled('Root')) {
+			if (Mage::getStoreConfigFlag('wordpress/integration/at_root')) {
+				$this->getAction()->removeCrumb('blog');
+			}
+		}
 		
 		return $this;
 	}
@@ -560,6 +595,10 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 		
 		if ($fbDesc = $object->getMetaValue('_yoast_wpseo_opengraph-description')) {
 			$tags['description'] = $fbDesc;
+		}
+		
+		if ($fbImage = $object->getMetaValue('_yoast_wpseo_opengraph-image')) {
+			$tags['image'] = $fbImage;
 		}
 
 		if ($items = $object->getTags()) {
@@ -689,5 +728,15 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 		}
 		
 		return $value;
+	}
+	
+	/**
+	 * Determine whether to remove the category base
+	 *
+	 * @return string
+	 */
+	public function canRemoveCategoryBase()
+	{
+		return (int)$this->getData('stripcategorybase') === 1;
 	}
 }

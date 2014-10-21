@@ -85,6 +85,10 @@ implements Mage_Widget_Block_Interface
 			}
 	
 			if ($categoryId = $this->getCategoryId()) {
+				if (strpos($categoryId, ',') !== false) {
+					$categoryId = explode(',', trim($categoryId, ','));
+				}
+
 				$collection->addCategoryIdFilter($categoryId);
 			}
 			

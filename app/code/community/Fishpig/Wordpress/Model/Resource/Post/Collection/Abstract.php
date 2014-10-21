@@ -49,8 +49,11 @@ abstract class Fishpig_Wordpress_Model_Resource_Post_Collection_Abstract extends
 			$this->_postTypes[] = $this->getNewEmptyItem()->getPostType();
 		}
 		
+		
 		if (count($this->_postTypes) === 1) {
-			$this->addFieldToFilter('post_type', $this->_postTypes[0]);
+			if ($this->_postTypes[0] !== '*') {
+				$this->addFieldToFilter('post_type', $this->_postTypes[0]);
+			}
 		}
 		else {
 			$this->addFieldToFilter('post_type', array('in' => $this->_postTypes));

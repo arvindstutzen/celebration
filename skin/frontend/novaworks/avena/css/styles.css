@@ -2901,6 +2901,7 @@ h3.product-name {
 	text-align: center;
 	letter-spacing: .5px;
 	padding-top: 0px;
+    clear: both;
 }
 
 h3.product-name a,.product-name a {
@@ -2911,7 +2912,6 @@ h3.product-name a,.product-name a {
     font-weight: normal;
     text-align: center;
     text-transform: none;
-    float: left;
 }
 .product-name a:hover {
     color: #363636;
@@ -2944,7 +2944,7 @@ h3.product-name a,.product-name a {
     max-width: 70px;
     width: 100%;
 }
-.col2-left-layout .products-grid, .col2-left-layout .products-grid2,
+.col2-left-layout, .col2-left-layout .products-grid2,
 .col2-right-layout .products-grid, .col2-right-layout .products-grid2 {padding:0;}
 .col1-layout .products-grid, .col1-layout .products-grid2 {margin:0 auto; }
 .novaworks-label {
@@ -7130,6 +7130,7 @@ a.inline{
 	font-size: 13px;
 	font-family: 'bree serif', serif;
 	letter-spacing: 0.5px;
+    text-align: center;
 }
 #ajaxmenu #tabs {
 	border-bottom-width: 3px;
@@ -7242,4 +7243,8 @@ a.inline{
      width: 24%;
      display: inline-block;
      margin-left: 1%;
+ }
+
+ .products-grid .item2{
+     margin-bottom: 15px;
  }

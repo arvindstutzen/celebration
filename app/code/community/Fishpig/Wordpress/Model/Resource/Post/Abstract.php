@@ -21,11 +21,10 @@ abstract class Fishpig_Wordpress_Model_Resource_Post_Abstract extends Fishpig_Wo
 			->from(array('e' => $this->getMainTable()))
 			->where("e.{$field}=?", $value)
 			->limit(1);
-		
-		$postType = $object->getPostType();		
-		$op = is_array($postType) ? 'IN' : '=';
-		
-		$select->where('e.post_type ' . $op . ' (?)', $postType);
+
+		if (($postType = $object->getPostType()) !== '*') {
+			$select->where('e.post_type ' . (is_array($postType) ? 'IN' : '=') . ' (?)', $postType);
+		}
 
 		return $select;
 	}

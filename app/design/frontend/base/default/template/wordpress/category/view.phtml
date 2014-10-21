@@ -11,6 +11,9 @@
 	<div class="page-title">
 		<h1><?php echo $this->escapeHtml($_category->getName()) ?></h1>
 	</div>
+	<?php if ($imageUrl = $_category->getImageUrl()): ?>
+		<img src="<?php echo $imageUrl ?>" alt="<?php echo $this->escapeHtml($_category->getName()) ?>" class="max-width" />
+	<?php endif; ?>
 	<?php if ($description = $_category->getDescription()): ?>
 		<p class="blog-desc"><?php echo $description ?></p>
 	<?php endif; ?>

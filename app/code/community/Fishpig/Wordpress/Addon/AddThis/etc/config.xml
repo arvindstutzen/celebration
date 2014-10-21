@@ -22,4 +22,13 @@
 	    	</wp_addon_addthis>
     	</helpers>
     </global>
+    <!--
+    <wordpress>
+    	<sidebar>
+    		<widgets>
+    			<addthis-widget>wp_addon_addthis/sidebar_widget_share</addthis-widget>
+    		</widgets>
+    	</sidebar>
+    </wordpress>
+    -->
 </config>

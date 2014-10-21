@@ -1,5 +1,5 @@
 <div class="category-products">
-    <ul class="products-grid2">
+    <ul class="products-grid row-fluid">
     <?php
        //echo (Mage::registry('current_category')->getId());
 	// $category= Mage::getModel('catalog/category')->load(Mage::registry('current_category')->getId());
@@ -30,7 +30,7 @@
                 $class = "";
             }
      ?>
-        <li class="item2 <?=$class?>">
+        <li class="item2 span3">
             
         <a href="<?php echo $_category->getURL() ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>"><img src="<?php echo  $cur_category->getImageUrl();  ?>" alt="<?php echo $this->htmlEscape($_category->getName()) ?>" /></a>
        <div class="subcat-title"><a href="<?php echo $_category->getURL() ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>"><?php echo $this->htmlEscape($_category->getName()) ?></a></div>
@@ -39,7 +39,7 @@
         endif;
         if($categorycount == 3){
         $categorycount = 0;
-        echo "</ul>\n\n<ul class=\"products-grid2\">";
+        echo "</ul>\n\n<ul class=\"products-grid row-fluid\" >";
         }
         else{
         $categorycount++;

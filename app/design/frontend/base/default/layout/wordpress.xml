@@ -34,8 +34,6 @@
 				<position helper="wordpress/getTopLinkPosition" />
 				<li_params />
 				<a_params>class="top-link-blog"</a_params>
-				<before_text />
-				<after_text />
 			</action>
 		</reference>
 		<!--  End of add top 'Blog' link -->

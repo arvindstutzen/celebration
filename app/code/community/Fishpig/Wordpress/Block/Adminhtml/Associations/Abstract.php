@@ -132,7 +132,9 @@ implements Mage_Adminhtml_Block_Widget_Tab_Interface
 		else {
 			return false;
 		}
-
+		
+		Mage::dispatchEvent('wordpress_association_' . $this->_getWpEntity() . '_collection_load_before', array('collection' => $collection, 'grid' => $this));
+		
 		Mage::helper('wordpress/associations')->addRelatedPositionToSelect($collection, $this->getAssociationType(), $this->_getObject()->getId(), $this->getStoreId());
 
 		$this->setCollection($collection);
