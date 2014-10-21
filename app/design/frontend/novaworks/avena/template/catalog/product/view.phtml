@@ -99,8 +99,8 @@
 					<!-- Facebook -->
 	            	<div class="addthis-toolbox-fb">                            
 	            		<?php echo $this->getLayout()->createBlock('sharingtool/share')->setBlockId('addthis_sharetool')->toHtml(); ?>
-                            <div class="clear:both"></div>
-                            <div class="inline-buttons">
+                        <div class="clear:both"></div>
+                        <div class="inline-buttons">
                                 <?php $youtubeId = Mage::getModel('catalog/product')->load($_product->getId())->getData('youtube_id'); ?>
 	            		<?php if ($youtubeId): ?>                            
 	            			<a class="youtube button" href="http://www.youtube.com/embed/<?php echo $youtubeId ?>?rel=0&wmode=transparent&vq=hd1080"><span><span>Product Video</span></span></a>                                         

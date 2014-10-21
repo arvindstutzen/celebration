@@ -7240,11 +7240,26 @@ a.inline{
  }
 
  .custom-footer-block ul li{
-     width: 24%;
+     width: 21%;
      display: inline-block;
-     margin-left: 1%;
+     margin-left: 2%;
+     margin-right: 3%;
+ }
+
+ .custom-footer-block ul li.first{
+     margin-left: 0%;
+ }
+
+ .custom-footer-block ul li.last{
+     margin-left: 3%;
+     margin-right: 0%;
  }
 
  .products-grid .item2{
-     margin-bottom: 15px;
+     margin-bottom: 40px;
+ }
+
+ .printing {
+     float: right;
+     margin-right : 10px;
  }

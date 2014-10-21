@@ -20,6 +20,7 @@ class Pektsekye_OptionConfigurable_Block_Product_View_Js extends  Mage_Catalog_B
         'attributesAffected' => false
       );     	
 
+      $_product = $this->getProduct();
       $rData = Mage::getModel('optionconfigurable/relation')->getRelationData($this->getProduct());      
 
       $outOfStockVIds = array();
@@ -62,7 +63,12 @@ class Pektsekye_OptionConfigurable_Block_Product_View_Js extends  Mage_Catalog_B
           if (!$hasParent)
             $data['notDepVIdsByOId'][$t][$id][] = $valueId;
    
-          $data['image'][$t][$valueId] = $value['image'];
+          try {
+          	$data['image'][$t][$valueId] = Mage::helper('catalog/image')->init($_product, 'tiny_image',$value['image'])->__toString();;
+          } catch (Exception $e) {
+          	$data['image'][$t][$valueId] = $value['image'];
+          }
+          $data['image'][$t][$valueId] = preg_replace('/.*?media\/extendware/', '', $data['image'][$t][$valueId]);
           $data['description'][$t][$valueId] = $value['description'];   
            
           if ($t == 'a' && ($hasParent || $hasChildren))
@@ -333,8 +339,8 @@ class Pektsekye_OptionConfigurable_Block_Product_View_Js extends  Mage_Catalog_B
         $thumbnailUrl = $this->makeThumbnail($image);			
         $pickerImageUrl = $this->makePickerImage($image);
         if ($this->thumbnailDirUrl == ''){
-          $this->thumbnailDirUrl = str_replace($image, '', $thumbnailUrl);					
-          $this->pickerImageDirUrl = str_replace($image, '', $pickerImageUrl);								
+          $this->thumbnailDirUrl = preg_replace('/extendware\/ewminify\/.*/', 'extendware', $thumbnailUrl);		
+          $this->pickerImageDirUrl = preg_replace('/extendware\/ewminify\/.*/', 'extendware', $pickerImageUrl);
         }	
       }
 	  }
@@ -385,7 +391,7 @@ class Pektsekye_OptionConfigurable_Block_Product_View_Js extends  Mage_Catalog_B
 	
     public function getProductBaseMediaUrl()
     { 			
-			return Mage::getSingleton('catalog/product_media_config')->getBaseMediaUrl();
+			return Mage::app()->getStore()->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . '/extendware';
 	 	}	
 	
 	 	
